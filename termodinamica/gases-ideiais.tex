@@ -1,0 +1,52 @@
+\section{Gases ideais}
+Nesta secção indroduz-se o modelo do gas ideal
+
+\subsection{Equação de estado do gás ideal}
+Como visto na secção anterior, quando a pressão é baixa relativamente à pressão critica, e/ou quando a temperatura é elevada em relação à temperatura crítica, o fator de compressibilidade é aproximadamente 1. Nestas situações, assume-se $Z=1$, ou seja:
+\begin{equation*}
+    pv = RT
+\end{equation*}
+conhecida como a \textbf{equação de estado do gás ideal}.
+
+Existem formas alternativas da mesma equação, obtidas com as relações $v=\frac{V}{m}$, $v=\frac{\overline{v}}{M}$ e $R=\frac{\overline{R}}{M}$:
+\begin{align*}
+    pV &= mRT \\
+    p\overline{v} &= \overline{R}T \\
+    pV &= n\overline{R}T
+\end{align*}
+
+
+
+\subsection{Modelo do gás ideal}
+
+O modelo do gás ideal é definido por 3 equações, que podem ser usadas com um certo grau de erro, uma vez que gases reais se aproximam deste modelo.
+\begin{align}
+    pv &= RT \label{eq:ideal-gas-1} \\
+    u &= u(T) \label{eq:ideal-gas-2} \\
+    h &= h(T) = u(T) + RT \label{eq:ideal-gas-3}
+\end{align}
+
+
+
+\subsection{Energia interna, entalpia, e calores específicos de gases ideiais}
+
+Num gás ideal, como a energia interna $u$ específica depende apenas da temperatura $T$, o calor específico $c_v$ também depende apenas de $T$.
+\begin{equation*}
+    c_v(T) = \frac{du}{dT}
+\end{equation*}
+
+De igual forma, como a entalpia especifica $h$ depende apenas de $T$, então o calor específico $c_P$ também é uma função apenas da temperatura.
+\begin{equation*}
+    c_p(T) = \frac{dh}{dT}
+\end{equation*}
+
+Diferenciando a equação \eqref{eq:ideal-gas-3} em relação à temperatura, obtém-se:
+\begin{equation*}
+    \frac{dh}{dT} = \frac{du}{dT} + R
+\end{equation*}
+de onde se obtém a relação:
+\begin{equation*}
+    c_p(T) = c_v(T) + R
+\end{equation*}
+
+Sabe se também que $c_p > c_v$, logo, a razão de calores específicos, $k=\frac{c_p(T)}{c_v(T)}$, é funcão apenas da temperatura e $k>1$.

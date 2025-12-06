@@ -1,0 +1,167 @@
+\section{Reversibilidade e irreversibilidade: 2ª lei da termodinâmica}
+\subsection{Enunciados da 2ª Lei da Termodinâmica}
+Existem 3 formas de enunciar a \textbf{2ª lei da termodinâmica}:
+\begin{itemize}
+    \item Enunciado de Clausius
+    \item Enunciado de Kelvin-Planck
+    \item Enunciado da entropia
+\end{itemize}
+Os enunciados de Clausius e de Kelvin-Planck são as formulações mais comuns da 2ª lei, mas o enunciado da entropia é o mais útil, e aplicável a uma grande variedade de contextos. Este último enunciado irá ser estudado no próximo capítulo.
+
+\subsubsection{Enunciado de Clausius}
+\begin{center}
+    \noindent\fbox{
+        \parbox{0.8\textwidth}{             \centering\textit{
+                É impossível para qualquer sistema operar de forma que o \textbf{único} resultado seja uma transferência de calor de um corpo mais frio para um mais quente.
+            }
+        }
+    }
+\end{center}
+
+O enunciado de Clausius não impossibilita a transferencia de calor de um corpo mais frio para um mais quente, mas tal transferência implica outros efeitos no sistema, na vizinhança, ou em ambos.
+
+
+
+\subsubsection{Enunciado de Kelvin-Planck}
+\begin{center}
+    \noindent\fbox{
+        \parbox{0.8\textwidth}{             \centering\textit{
+                É impossível para qualquer sistema operar num ciclo termodinâmico e fornecer energia por trabalho à sua vizinhança enquanto recebe energia por transfeência de calor de \textbf{um único reservatório} de temperatura.
+            }
+        }
+    }
+\end{center}
+O enunciado de Kelvin-Planck não impossibilita um sistema de realizar trabalho a partir de calor transferido de um único reservatório, mas implica que esse sistema não realiza um ciclo.
+
+O enunciado de Kelvin-Planck pode ser expressado analiticamente pela equação:
+\begin{equation*}
+    W_{ciclo} \leq 0\quad\text{(com um único reservatório)}
+\end{equation*}
+
+
+
+\subsubsection{Enunciado da entropia}
+A entropia é uma propriedade extensiva de um sistema, tal como a massa e a energia, mas ao contrário destas, a entropia pode ser gerada quando existem \textit{irreverssibilidades} no sistema. Este conceito será estudado em profundidade no próximo capítulo.
+\begin{center}
+    \noindent\fbox{
+        \parbox{0.8\textwidth}{
+            \centering\textit{
+                É impossível para qualquer sistema operar de forma a que entropia seja destruida.
+            }
+        }
+    }
+\end{center}
+
+
+
+\subsection{Processos reversíveis e irreversíveis}
+Um processo é dito de \textbf{irreversível} se o sistema e todas as partes de sua vizinhança não puderem ser exatamente restauradas para os respetivos estados iniciais após a ocorrência do processo.
+
+Um sistema que sofre um processo irreversível não está necessáriamente impedido de voltar ao seu estado inicial, mas isto implicaria mudanças na vizinhança. É impossível reverter \textbf{ambos} (sistema e vizinhança) para o seu estado inicial. Uma consequência de segunda lei da termodinâmica é que todos os processos naturais espontâneos são irreversíveis.
+
+Um processo é \textbf{reversível} se o sistema e a vizinhança puderem retornar aos seus estados iniciais. Isto acontece quando:
+\begin{enumerate}
+    \item O processo é quase estático
+    \item Não é acompanhado de quaisquer efeitos dissipativos
+\end{enumerate}
+
+
+
+\subsection{Detalhar o enunciado de Kelvin-Planck}
+A expressão analítica do enunciado de Kelvin-Planck pode ser decomposta entre processos reversíveis e irreversíveis:
+\begin{equation*}
+    W_{ciclo} \leq 0
+    \begin{cases}
+        <0:\quad &\text{irreversibilidade} \\
+        = 0:\quad &\text{reversibilidade}
+    \end{cases}
+\end{equation*}
+
+
+
+\subsection{Corolários de Carnot}
+\subsubsection{Ciclos de Potência}
+Recordando, a eficiência ou rendimento, $\eta$ de uma máquina térmica é dado pela razão entre o trabalho realizado e o calor recebido num ciclo:
+\begin{equation} \label{eq:eta-rendimento}
+    \eta = \frac{W_{ciclo}}{Q_H} = 1 - \frac{Q_C}{Q_H}
+\end{equation}
+
+Se hipotéticamente $Q_C = 0$ o sistema iria receber energia do reservatório quente, $Q_H$, e produzir uma quantidade de trabalho igual à energia recebida (eficiência máxima, $\eta = 1$). No entanto, esta hipotese viola o enunciado de Kelvin-Planck.
+
+Assim sendo em qualquer ciclo de potência, apenas uma parte da energia recebida como calor $Q_H$ é obtida como trabalho. A restante energia, $Q_C$ é descarregada para o reservatório frio. Logo, \textbf{a eficiencia térmica de um ciclo de potência é sempre inferior a 100\%.} - $\eta < 100\%\quad\text{(sistemas reais)}$
+
+Os corolários de Carnot, consequencia da 2ª Lei da Termodinâmica, dizem nos que:
+\begin{enumerate}
+    \item A eficiência, $\eta$, de um ciclo de potência irreversível, realizado entre dois reservatórios térmicos, é inferior à eficiência de um ciclo reversível, realizado entre os mesmos reservatórios.
+    \item Todos os ciclos de potência reversíveis, que se realizem entre os mesmos reservatórios térmicos, tem a mesma eficiência, $\eta$.
+\end{enumerate}
+
+\subsubsection{Ciclos de refrigeração e de bomba de calor}
+O raciocínio anterior pode ser igualmente aplicado a ciclos de refrigeração e de bomba de calor, cuja eficiência/rendimento é dada por:
+\begin{align*}
+    \beta = \frac{Q_C}{W_{ciclo}} = \frac{Q_C}{Q_H - Q_C}\quad&\text{(Ciclos de Refrigeração)} \\
+    \gamma = \frac{Q_C}{W_{ciclo}} = \frac{Q_C}{Q_H - Q_C}\quad&\text{(Bombas de Calor)}
+\end{align*}
+
+Aplicando o mesmo raciocínio, obtém-se os corolários:
+\begin{enumerate}
+    \item Os coeficientes de performance de uma bomba de calor ou ciclo de refrigeração tendem para $+\infty$ quando $W_{ciclo}$ tende para 0, No entando, num ciclo irreversível são sempre um valor real, finito.
+    \item O coeficiente de performance de um ciclo de refrigeração/bomba de calor é sempre menor que o coeficiente de performance de um ciclo reversível, quando estes operam entre os mesmos reservatórios térmicos.
+    \item Todos os ciclos de refrigeração/bomba de calor que operam entre os mesmos dois reservatórios termicos têm o mesmo coeficiente de performance.
+\end{enumerate}
+
+
+
+\subsection{Escala de temrperatura absoluta}
+Do segundo corolário de Carnot sabemos que qualquer sistema que execute um ciclo reversível entre dois reservatórios de temperatura tem o mesmo rendimento, logo, devido à definição de rendimento \eqref{eq:eta-rendimento}, sabemos que a razão $\frac{Q_C}{Q_H}$ depende apenas das temperaturas dos reservatórios:
+\begin{equation*}
+    \left( \frac{Q_C}{Q_H} \right) = f(T_C,T_H)
+\end{equation*}
+
+Esta equação é a base para a definição de uma escala de temperatura termodinâmica, havendo diversas escolhas para a função $f$, mas a \textbf{Escala Kelvin} é definida com $f=\frac{T_H}{T_C}$. Obtém-se assim:
+\begin{equation} \label{eq:q-ratio_t-ratio}
+    \frac{Q_C}{Q_H} = \frac{T_C}{T_H}\quad\text{(ciclos reversíveis)}
+\end{equation}
+
+Esta equação, no entanto, dá nos apenas a razao entre temperaturas, sendo necessário adotar um valor de referência, que é como ja sabemos, a temperatura no ponto triplo da água ($T_{TP} = \qty{237.16}{\kelvin}$. Assim temos a definicao da escala Kelvin, dada por:
+\begin{equation*}
+    T = 273.16 \frac{|Q|}{|Q_{TP}|} \unit{\kelvin}
+\end{equation*}
+
+
+
+\subsection{Rendimento máximo de ciclos}
+\subsubsection{Máquinas térmicas}
+Das equações \ref{eq:eta-rendimento} e \ref{eq:q-ratio_t-ratio} obtém se uma expressão para a eficiência de um ciclo \textbf{reversível} a operar entre dois reservatórios, chamada de \textbf{eficiência de Carnot}:
+\begin{equation*}
+    \eta_{max} = 1-\frac{T_C}{T_H}
+\end{equation*}
+
+Esta é a eficiência \textbf{máxima} de qualquer ciclo a operar entre reservatórios de temperatura $T_C$ e $T_H$, e aumenta à medida que $T_H$ aumenta e $T_C$ diminui.
+
+\subsubsection{Ciclos de refrigeração/bomba de calor}
+Pelo mesmo raciocínio chega-se às equações para a eficiência máxima de ciclos de refrigiração \eqref{eq:perf-coef-refrig} e de bomba de calor \eqref{eq:perf-coef-heat-pmp}:
+\begin{align}
+    \beta_{max} &= \frac{T_C}{T_H-T_C} \label{eq:perf-coef-refrig} \\
+    \gamma_{max} &= \frac{T_H}{T_H-T_C} \label{eq:perf-coef-heat-pmp}
+\end{align}
+
+
+
+\subsection{Desigualdade de Clausius}
+A desigualdade de Clausius, aplicável para qualquer ciclo termodinâmico, diz-nos que:
+\begin{equation*}
+    \oint_{fronteira} \left(\frac{\delta Q}{T}\right) \leq 0
+\end{equation*}
+e esta pode ser escrita na forma:
+\begin{equation*}
+    \oint_{fronteira} \left(\frac{\delta Q}{T}\right) \leq -\sigma_{ciclo}
+\end{equation*}
+onde $\sigma_{ciclo}$ vai ser interpretada, no próximo capítulo, como a entropia gerada, e $\sigma_{ciclo} \geq 0$.
+\begin{equation*}
+\begin{cases}
+    \sigma_{ciclo} = 0 \quad &\text{não há irreversibilidades presentes no sistema} \\
+    \sigma_{ciclo} > 0 \quad &\text{há irreversibilidades no sistema} \\
+    \sigma_{ciclo} < 0 \quad &\text{sistema impossível}
+\end{cases}
+\end{equation*}

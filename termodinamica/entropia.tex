@@ -1,0 +1,73 @@
+\section{Entropia: Formulação da 2ª lei da Termodinâmica}
+\subsection{Definição de entropia}
+Partindo da desigualdade de Clausius, chega-se à conclusão que o integral $\int \delta Q/T$, num processo reversível, depende apenas dos estados inicial e final. Isto significa que este integral representa uma varição de uma propriedade do sistema.
+
+A esta propriedade chamamos \textbf{entropia} e designa-se pela letra $S$:
+\begin{equation*}
+    S_2-S_1 = \int_1^2 \frac{\delta Q}{T}
+\end{equation*}
+e escrevendo-se na forma diferencial:
+\begin{equation} \label{eq:entropy-diff}
+    dS = \frac{\delta Q}{T}
+\end{equation}
+A entropia é uma propriedade extensiva, e a unidade SI é o \unit{\joule\per\kelvin}, mas é apresentada comumente em \unit{\kilo\joule\per\kelvin}.
+
+
+
+\subsection{Equações $T\,dS$}
+Partindo da 1ª lei da Termodinâmica, e rearanjando a equação \eqref{eq:entropy-diff}, obtemos a primeira equação $T\,ds$:
+\begin{equation*}
+    T\,dS = dU + pdV
+\end{equation*}
+
+A segunda equação é obtida derivando a definição de entalpia \eqref{eq:enthalpy}, resolvendo em ordem a $dU$ e susbtituindo na primeira equaçáo, obtendo-se:
+\begin{equation*}
+    T\,dS = dH - V\,dp
+\end{equation*}
+
+Estas equações podem ainda ser escritas por unidade de massa:
+\begin{align*}
+    T\,ds &= du + p\,dv \\
+    T\,ds &= dh - v\,dp
+\end{align*}
+
+
+
+\subsection{Entropia de substancias incompressíveis}
+Na secção \ref{sec:subst-incompres} definiu-se o modelo da substancia incompressível, que assume que o volume específico é constante e que a energia interna específica depende apenas da temperatura, e os calores específicos $c_v$ e $c_p$ são iguais, e representados por $c$.
+Assim sendo, $du = c(T)\,dT$, e aplicando esta igualdade à primeira equação $T\,ds$ obtém-se:
+\begin{equation*}
+    ds = \frac{c(T)\,dT}{T} + \cancelto{0}{\frac{p\,dv}{T}} = \frac{c(T)\,dT}{T}
+\end{equation*}
+e integrando, obtém-se:
+\begin{equation*}
+    s_2 - s_2 = c \ln{\frac{T_2}{T_1}}\quad\text{(incompressível, c constante)}
+\end{equation*}
+
+
+
+\subsection{Balanço de entropia}
+Partindo da desigualdade de Clausius e da definicção de variação de entropia obtém-se a seguinte equação, denominada de \textbf{balanço da entropia em sistemas fechados}:
+\begin{equation}
+    S_2 - S_1 = \int_1^2 \frac{\delta Q}{T} + \sigma
+\end{equation}
+que pode ser interpretada como: ``A variação de entropia num sistema é dada pela entropia transferida através da fronteira do sistema, somada com a entropia gerada dentro do sistema (pelas irreverssibilidades)''
+
+Esta equação pode ser escrita na forma diferencial como:
+\begin{equation*}
+    dS = \frac{\delta Q}{T} + \delta\sigma
+\end{equation*}
+
+
+
+\subsection{Interpretação estatística da entropia}
+Com base em cálculos detalhados da mecânica estatística mostra-se que a entropia é dada pela expressão:
+\begin{equation*}
+    S = k_B \ln{\Omega}
+\end{equation*}
+onde $\Omega$ representa o número de mico-estados (configurações possíveis, isto é, posições e velocidades das particulas, que o sistema pode ter, de acordo com a energia total do sistema) e $k_B$ representa a constante de Boltzmann.
+
+Esta constante de Boltzmann, $k_B$ é dada pela equação:
+\begin{equation*}
+    k_B = \frac{\overline{R}}{N_A}
+\end{equation*}

@@ -1,0 +1,276 @@
+\section{Diagramas de fases. Calor latente}
+
+\subsection{Fases e substancias puras}
+
+Uma \textbf{Substância Pura} é uma cuja composição química é uniforme. Uma substânica pura pode existir em várias \textbf{fases}
+
+Uma \textbf{fase} de uma substância é uma cantidade de substância com propriedades \textbf{fisicas} homogéneas. Homogeneidade neste contexto significa que toda a matéria é \textbf{sólida}, \textbf{líquida} ou \textbf{gasosa}. Um sistema pode conter uma ou mais fases.
+
+
+
+\subsection{Relação $p-v-T$}
+Em sistemas compressíveis simples, sabe se por procedimento experimental que a Temperatura $T$ e o Volume específico $v$ podem ser considerados como independentes e a Pressão $p$ pode ser determinada como função destes dois: $p=p(T,v)$. O gráfico desta função é uma superfície, a superfície $p-v-T$
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Termodinamica/img/pvt-surface.png}
+    \caption{Diagrama $p-v-T$ de uma substância que expande ao solidificar}
+    \label{fig:pvt-1}
+\end{figure}
+
+\subsubsection{Regiões de fase única}
+Num diagrama $p-v-T$ de uma substância há regiões em que apenas existe uma fase: região sólida, líquida, e gasosa. Nestas regiões o estado do sistema fica definido por \textbf{duas} das seguintes propriedades: pressão, volume expecífico e temperatura.
+
+\subsubsection{Regiões de duas fases}
+Entre as fases de fase única encontram se zonas em que existem duas fases em equilibrio: liquido-gas, sólido-liquido, e sólido-vapor.
+
+Nas zonas de duas fases, a pressão e a temperatura não são independentes e o estado do sistema não poe ser definido apenas por temperatura e pressão. Para descrever o estado numa região de duas fases, é necessário indicar o volume específico, juntamente com a temperatura \textbf{ou} a pressão.
+
+Um estado onde uma mudança de fase se inicia é chamado de \textbf{estado de saturação}.
+
+As 3 fases podem existir em equilibrio ao longo de uma linha chamada \textbf{triple line} ou \textbf{linha tripla}.
+
+A zona líquido-vapor é chamada de \textbf{saturation dome} ou \textbf{cúpula de saturação}, e é limitada pelas linhas de líquido saturado e vapor saturado. No topo da cúpula, econtra se o \textbf{ponto crítico}. A cúpula é limitada inferiormente pela linha tripla.
+
+
+
+\subsection{Projeções do diagrama $p-v-T$}
+
+\subsubsection{Diagrama de fases}
+Ao projetar a superfície $p-v-T$ no plano pressão-temperatura, obtém se um \textbf{diagrama de fases}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Termodinamica/img/phase-diagram.png}
+    \caption{Diagrama de Fases}
+    \label{fig:diag-fases}
+\end{figure}
+
+Neste tipo de diagramas, as regiões de duas fases reduzem-se a uma linha. Um ponto nesta linha representa todas as misturas de duas fases à temperatura e pressão do ponto.
+
+A linha tripla (da superficie $p-v-T$) é projetada num ponto, chamado de \textbf{ponto triplo}.
+
+\subsubsection{Diagrama $p-v$}
+Projetando a superficie $p-v-T$ no plano pressão-volume específico, obtém se um diagrama $p-v$.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Termodinamica/img/pv-diagram.png}
+    \caption{Diagrama $p-v$}
+    \label{fig:diag-pv}
+\end{figure}
+
+Este tipo de diagrama é útil para a resolução de alguns exercícios, e é muitas vezes apresentado com linhas de temperatura constante. Quando o sistema se encontra numa região de duas fases, a temperatura constante, a pressão mantém se tambem constante com mudanças de $v$. (as linhas isotérmicas são horizontais na cúpula de saturação).
+
+\subsubsection{Diagrama $T-v$}
+Projetando a superfície $p-v-t$ para o plano temperatura-volume específico, obtém-se um diagrama $T-v$.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Termodinamica/img/pt-diagram.png}
+    \caption{Diagrama $T-v$}
+    \label{fig:diag-pt}
+\end{figure}
+
+Tal como o diagrama $p-v$, o diagrama $T-v$ é útil na resolução de problemas, e é apresentado muitas vezes com linhas de pressão constante.
+
+Para pressões abaixo da pressão do ponto crítico, a pressão mantém se constante com mudanças de temperatura, enquanto é atravessada a região de 2 fases (ocorre mudança de estado).
+
+
+
+\subsection{Mudanças de fase}
+Um sistema constituido por \qty{1}{kg} de àgua a uma temperatura de \qty{20}{\degreeCelsius} e a uma pressão de \qty{1.014}{bar} é aquecido a pressão constante.
+
+\paragraph{Estado líquido}
+O sistema inicia numa fase líquida, denominada de \textbf{líquido sub-arrefecido}, \textbf{líquido comprimido}, ou apenas líquido. À medida que aumenta a temperatura, o volume específico aumenta gradualmente até atingir o ponto f da figura \ref{fig:diag-pt}. Ao estado representado pelo ponto f chama-se \textbf{líquido saturado}.
+    
+\paragraph{Mistura líquido-vapor}
+Após atingir o estado de líquido saturado, qualquer transferência adicional de calor leva à formação de vapor, sem qualquer alteração da temperatura. O sistema consiste numa mistura de duas fases líquido-gás. Ao continuar a transferir energia por calor, o sistema chega eventualmente ao ponto g da figura \ref{fig:diag-pt}. A este estado chama-se \textbf{vapor saturado}.
+
+\paragraph{Estado gasoso}
+Assim que o sistema atinge o estado de vapor saturado, transferencia adicional de energia leva ao aumento tanto da temperatura como do volume específico. Este estado corresponde ao ponto s da figura \ref{fig:diag-pt}, e é chamado de \textbf{vapor sobre-aquecido}, ou simplesmente vapor.
+
+\subsubsection{Parâmetro de qualidade}
+Para misturas líquido-vapor, é conveniente definir o parâmetro de qualidade:
+\begin{equation}
+    x = \frac{m_{vapor}}{m_{liquid} + m_{vapor}}
+\end{equation}
+
+
+
+\subsection{Calor latente}
+O \textbf{calor latente} é a quantidade de calor que uma unidade de massa de substância deve receber ou ceder para mudar de fase.
+
+
+
+\subsection{Entalpia}
+Numa mudança de fase, o \textbf{calor latente} não corresponde à variação de energia interna do sistema ($\Delta U$) uma vez que durante uma mudança de fase há expansão/contração do sistema, logo é realizado trabalho.
+\begin{gather*}
+    \text{calor latente} \neq \Delta U \\
+    calor\ latente = \Delta U + W = \Delta U + \int_{v_i}^{v_f} p\,dV \\
+\end{gather*}
+
+É assim conveniente definir uma variável de estado tal que a sua variação durante uma mudança de fase corresponda ao calor latente. Essa variável é a entalpia:
+\begin{equation}
+    H = U + pV
+\end{equation}
+ou expressa por unidade de massa (entalpia específica):
+\begin{equation} \label{eq:enthalpy}
+    h = u + pv
+\end{equation}
+ou por mole:
+\begin{equation}
+    \overline{h} = \overline{u} + p\overline{v}
+\end{equation}
+As unidades para a entalpia são as mesmas de energia interna (\unit{J}).
+
+
+
+\subsection{Calores específicos}
+Duas propriedades importantes em termodinâmica são conhecidas como \textbf{calores específicos}, notados como $c_v$ e $c_p$. São propriedades intensivas e são definidas como as derivadas da energia interna específica, $u$, e da entalpia específica, $h$:
+\begin{gather}
+    c_v=\left( \frac{\partial u}{\partial T}\right)_v \\
+    c_p = \left( \frac{\partial h}{\partial T}\right)_p
+\end{gather}
+
+
+
+\subsection{Aproximações para líquidos}
+Usando dados experimentais (ver valores tabelados) conclui-se que, a temperatura constante, o volume expecífico $v$ e a energia interna específica $u$ variam muito pouco com a pressão. 
+
+São assim usadas as seguintes aproximações para cálculos:
+\begin{gather}
+    v(T,p) \approx v_f(T) \label{eq:approx_v} \\
+    u(T,p) \approx u_f(T) \label{eq:approx_u}
+\end{gather}
+onde $v_f$ e $u_f$ são os valores dessas propriedades para um líquido saturado.
+
+Pode também ser obtida uma aproximação da entalpia usando as equações \eqref{eq:approx_v}, \eqref{eq:approx_u} e a definição de entalpia \eqref{eq:enthalpy}:
+\begin{equation*}
+    h(T,p) \approx h_f(T)
+\end{equation*}
+
+
+
+\subsection{Modelo da substância incompressível} \label{sec:subst-incompres}
+Através de aproximações e para simplificar cálculos usa se o \textbf{modelo da substância incompressível}, onde o volume expecífico é constante e a energia interna expecifica é considerada apenas funcção da temperatura:
+\begin{gather*}
+    v = \text{constante} \\
+    u = u(T)
+\end{gather*}
+
+Sendo a energia apenas dependente da temperatura, então o \textbf{calor expecífico} $c_v$ é tambem uma funcão da temperatura:
+\begin{equation*}
+    c_v(T) = \frac{du}{dT}
+\end{equation*}
+mas a \textbf{entalpia} depende da pressão e temperatura:
+\begin{equation*}
+    h(T,p) = u(T) + pv
+\end{equation*}
+
+Numa substância incompressível os calores específicos $c_p$ e $c_v$ são iguais, sendo representados apenas como $c$.
+
+As equações para a variação da energia interna e da entalpia são:
+\begin{gather*}
+    \Delta u = \int_{T_1}^{T_2} c(T)\,dT \\
+    \Delta h = \Delta u + v(p2-p1)
+\end{gather*}
+Em intervalos de temperatura pequenos, $c$ pode ser considerado constante, sem perda significativa de precisão, obtendo-se:
+\begin{gather*}
+    \Delta u = c(T_2 - T_1) \\
+    \Delta h = c(T_2 - T_1) + v(p_2 - p_1)
+\end{gather*}
+
+\subsubsection{Coeficientes de dilatação e compressibilidade}
+Substâncias incompressíveis são apenas uma idealização. As propriedades que caracterizam a variação de volume devido à pressão ou à temperatura são o \textbf{coeficiente de dilatação volumétrica}:
+\begin{equation*}
+    \beta = \frac{1}{v} \left( \frac{\partial v}{\partial T} \right)_p
+\end{equation*}
+e o \textbf{coeficiente de compressibilidade isotérmica}:
+\begin{equation*}
+    k = \frac{1}{v} \left( \frac{\partial v}{\partial T} \right)_p
+\end{equation*}
+
+
+
+\subsection{Leis experimentais}
+Abaixo são enunciadas uma série de leis obtidas de resultados experimentais:
+
+\subsubsection{Lei de Boyle e Mariotte}
+Num processo \textbf{\textit{isotérmico}} a pressão e o volume dos estados finais e iniciais são inversamente proporcionais:
+\begin{equation*}
+    p_i V_i = p_f V_f
+\end{equation*}
+
+\subsubsection{Lei dos volumes de Charles e Gay-Lussac}
+Para uma temperatura de referência $T_0$, todos os gases tem o mesmo coeficiente de expansão térmica volumétrica médio:
+\begin{equation*}
+    \overline{\beta_0} = \frac{1}{V_0}\frac{\Delta V}{\Delta T} = \frac{1}{V_0}\frac{V-V_0}{T-T_0}
+\end{equation*}
+sendo assim a variação de volume de um gás proporcional à variação de temperatura:
+\begin{equation*}
+    V-V_0 = \overline{\beta_0} V_0 (T-T_0)
+\end{equation*}
+
+minimo de temperatura, bla bla bla, escala absoluta de temperatura \textbf{????}
+
+Definição de escala de temperatura absoluta:
+\begin{equation*}
+    T = 273.1 \lim_{p_{PT} \to 0} \left( \frac{p}{p_{PT}} \right) (\unit{\kelvin})
+\end{equation*}
+a volume $V$ constante, onde $p_{PT}$ é a pressão do gás à temperatura do ponto triplo da água.
+
+\subsubsection{Lei de Avogadro}
+Segundo a lei de Avogadro, nas mesmas condições de pressão e temperatura, todos os gases têm o mesmo volume molar:
+\begin{equation*}
+    \overline{v} = \frac{V}{n} = f(p,T)
+\end{equation*}
+
+\subsubsection{Constante universal dos gases}
+De resultados experimentais concluiu-se que a razão $p\overline{v}/T$ tende para um valor constante a pressões baixas, independentemente da temperatura e do gás em consideração.
+\begin{equation} \label{eq:univ-gas-const}
+    \lim_{p\to0}\frac{p\overline{v}}{T}= \overline{R} \quad (\unit{\joule\per\mole\per\kelvin})
+\end{equation}
+
+A esta constante $\overline{R}$ chama-se \textbf{constante universal dos gases}, e tem o valor de $R^* = \qty{8.314}{\joule\per\mole\per\kelvin}$.
+
+A constante universal dos gases pode ser expressa em em ordem à massa molar de uma molécula $M$, usando-se apenas o símbolo $R$ para este valor (sem a $\overline{\text{linha}}$):
+\begin{equation*}
+    R = \frac{R^*}{M}\quad (\unit{\joule\per\kilogram\per\kelvin})
+\end{equation*}
+
+\subsubsection{Fator de compressibilidade}
+A razão adimensional denominada \textbf{fator de compressibilidade} $Z$ é definida como:
+\begin{equation*}
+    Z = \frac{p\overline{v}}{\overline{R}T} = \frac{pv}{RT}
+\end{equation*}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Termodinamica/img/compress-factor.png}
+    \caption{Fator de Compressibilidade $Z$ em função da pressão $p$, a temperatura constante $T$}
+    \label{fig:comp-factor-hydrogen}
+\end{figure}
+
+Expressando a equação \eqref{eq:univ-gas-const} em termos do fator de compressibilidade obtém-se:
+\begin{equation*}
+    \lim_{p\to0} Z = 1
+\end{equation*}
+ou seja, o fator de compressibilidade tende para 1 a pressões baixas.
+
+\subsubsection{Compressibilidade generalizada}
+A figura \ref{fig:comp-factor-hydrogen} apresenta o fator de compressibilidade para o hidrogénio, mas os gráficos são \textbf{qualitativamente} iguais (gráficos parecidos) para todos os gases. Se as coordenadas forem mudadas, é obtida igualdade \textbf{quantitativa} (gráficos iguais com valores iguais). Para obter esta igualdade, o fator de compressibilidade $Z$ é representado nos eixos \textbf{pressão reduzida} $p_R$, e \textbf{temperatura reduzida} $T_R$, definidas como:
+\begin{gather*}
+    p_R = \cfrac{p}{p_c} \\
+    T_R = \frac{T}{T_c}
+\end{gather*}
+onde $p_c$ e $T_c$ são a pressão e temperatura do ponto crítico (desse gás).
+
+A representação do gráfico de $Z$ nestas coordenadas é igual para todos os gases, obtendo-se um gráfico de compressibilidade generalizado (figura \ref{fig:gen-comp-fact}).
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Termodinamica/img/gen-comp-graph.png}
+    \caption{Gráfico de compressibilidade generalizado}
+    \label{fig:gen-comp-fact}
+\end{figure}

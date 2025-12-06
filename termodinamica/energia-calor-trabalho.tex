@@ -1,0 +1,247 @@
+\section{Energia: Calor e Trabalho. 1ª lei da termodinâmica}
+
+\subsection{Conhecimento prévio}
+
+Já conhecemos uma série de definições relacionadas com conceitos energéticos:
+\begin{gather}
+    \label{eq:work}
+    W_{\vec{F}} = \int_{s_1}^{s_2} \vec{F} \cdot d\vec{s} \\
+    \label{eq:KE}
+    \Delta KE = \frac{1}{2} m \left( V_2^2 - V_1^2 \right) \\
+    \label{eq:PE}
+    \Delta PE = -mg(z_2 - z_1) \\
+    \label{eq:EM}
+    \Delta E_m = \Delta KE + \Delta PE
+\end{gather}
+sendo (\ref{eq:work}) a definição de trabalho de uma força, (\ref{eq:KE}) a (variação de) energia cinética, (\ref{eq:PE}) a (variação de) energia potencial, e (\ref{eq:EM}) a (variação de) energia mecânica. A partir da equação \ref{eq:EM} deduz-se o princípio da conservação da energia.
+
+São também já conhecidas as relações entre as grandezas:
+\begin{gather*}
+    \Delta KE = W_{\vec{F_R}} \\
+    \Delta PE = W_{\vec{F_C}} \\
+    \Delta E_m = W_{\vec{F_{NC}}}
+\end{gather*}
+sendo $\vec{F_R}$ a resultante das forças, $\vec{F_C}$ o somatório das forças conservativas, e $\vec{F_{NC}}$ o somatório das forças não conservativas.
+
+
+
+\subsection{Trabalho}
+
+Em termodinâmica uma interação é caracterizada como trabalho se o efeito dessa interação na vizinhança do sistema puder ser substituida pela subida ou descida de um peso.
+
+Trabalho é um processo de transferência de energia.
+
+\subsubsection{Convenção de sinais e notação}
+
+\begin{center} \large
+    Trabalho feito \textbf{\textit{pelo}} sistema: $ W>0 $
+    
+    Trabalho feito \textbf{\textit{no}} sistema: $ W<0 $
+\end{center}
+
+
+\paragraph{Diferencial do trabalho}
+
+O trabalho não é uma propriedade do sistema. Ao contrário de outras grandezas, como o volume ou a pressão, o trabalho não tem um valor definido para cada estado, apenas sendo definido para um processo, ou seja, mudança de un estado para outro.
+
+Assim sendo adota-se a notação $\delta W$  para o diferencial do trabalho em vez do expectável $\xcancel{dW}$.
+
+
+
+\subsubsection{Potência}
+
+A taxa de transferência de energia por trabalho é denominada por \textbf{Potência}:
+\begin{equation*}
+    \dot{W} = \frac{\delta W}{dt}
+\end{equation*}
+
+Quando o trabalho resulta de uma força macroscópica observável é válida a formula:
+\begin{equation*}
+    \dot{W} = \vec{F} \cdot \vec{V}
+\end{equation*}
+
+
+
+\subsubsection{Trabalho de expansão ou compressão de um fluído}
+
+O trabalho realizado por um sistema que consiste num fluido dentro de um pistão quando este é deslocado é dado por:
+\begin{equation*}
+    \delta W = pA\,dx
+\end{equation*}
+sendo $p$ a pressão do fluído e $A$ a área da face do pistão.
+
+O produto $A\,dx$ representa uma mudança de volume, $dV$. A equação pode ser integrada para uma mudança de volume de $V_1$ a $V_2$ obtendo-se a seguinte expressão, válida para todos os sistemas, em processos quase-estáticos:
+\begin{equation} \label{eq:comp-exp-work}
+    W = \int_{V_1}^{V_2} p\,dV
+\end{equation}
+
+\paragraph{Processos politrópicos}
+Para avaliar o integral da equação (\ref{eq:comp-exp-work}) é necessário obter uma relação entre a pressão $p$ e o volume $V$. Uma das relações que pode ser considerada é aquela que representa um processo politrópico:
+\begin{gather*}
+    pV^{n} = \text{constante} \\
+    \text{OU} \\
+    pv^{n} = \text{constante}
+\end{gather*}
+Outras relações entre $p$ e $V$ podem ser consideradas.
+
+
+\subsubsection{Outros exemplos de trabalho}
+
+\paragraph{Extensão de uma barra sólida}
+Numa barra fixa em $x=0$ à qual é aplicada uma tensão normal $\sigma$ o trabalho é dado por:
+\begin{equation*}
+    W = -\int_{x_1}^{x_2} \sigma A\,dx
+\end{equation*}
+
+\paragraph{Extensão de um filme de líquido}
+Para um líquido suspenso numa estrutura de arame, sustentado pela tensão superficial do mesmo. Sendo $\tau$ a tensão superficial exercida pelo filme num arame móvel, o trabalho é dado por:
+\begin{equation*}
+    W = -\int_{A_1}^{A_2} \tau\,dA
+\end{equation*}
+
+\paragraph{Potência transmitida por um eixo}
+Num eixo a rodar com velocidade angular $\omega$ que exerce um torque $\tau$ na vizinhança, o trabalho realizado em $n$ rotações é dado por:
+\begin{equation*}
+    W=2\pi n \tau
+\end{equation*}
+e a equação da potência transmitida para a vizinhanca é:
+\begin{equation*}
+    \dot{W} = \tau\omega
+\end{equation*}
+
+\paragraph{Trabalho elétrico}
+Num sistema constituido por uma bateria de diferença de potencial $\varepsilon$, conectada a um circuito externo com uma corrente $I$. Sendo $Q$ a carga que atravessa um ponto do circuito, o trabalho é dado por
+\begin{equation*}
+    \delta W = -\varepsilon\,dQ
+\end{equation*}
+e a potência transmitida é
+\begin{equation*}
+    \dot{W} = -Ei
+\end{equation*}
+
+
+
+\subsection{Energia}
+
+\noindent Em termodinâmica a energia é dividida em 3 componentes:
+\begin{itemize}
+    \item \textbf{Energia Cinética $KE$} - Associada com o movimento do sistema como um todo.
+    \item \textbf{Energia Potencial Gravítica $PE$} - Relacionada com a posição do sistema como um todo, no campo gravítico terrestre.
+    \item \textbf{Energia Interna $U$} - Todas as outras formas de energia.
+\end{itemize}
+
+\noindent Assim sendo, a energia total de um sistema é dada por:
+\begin{equation*}
+    E = KE + PE + U
+\end{equation*}
+e a variação da energia é representada por:
+\begin{equation*}
+    \Delta E = \Delta KE + \Delta PE + \Delta U
+\end{equation*}
+
+
+
+\subsection{Calor}
+Até agora foram consideradas as transferências de energia que podem ser consideradas trabalho, mas é possivel haver outras formas de transferencia de enrgia. A este tipo de interação chama se \textbf{calor}.
+
+\subsubsection{Convenção de sinais e notação}
+
+Calor é a transferência de energia de e para um sistema. Por convenção considera se positiva quando o sistema ganha energia e negativa quando o sistema transfere energia para a vizinhança.
+
+\begin{center} \large
+    Energia transferida \textbf{\textit{para}} o sistema: $ Q>0 $
+    
+    Energia transferida \textbf{\textit{do}} sistema: $ Q<0 $
+\end{center}
+
+Tal como o trabalho, o calor não é uma propriedade do sistema, logo não tem um valor definido para um estado, sendo tambem usada a notação $\delta Q$ em vez de \xcancel{dQ}.
+
+\subsubsection{Calor num processo}
+O calor transferido num processo entre o estado 1 e o estado 2 é dado por:
+\begin{equation*}
+    Q = \int_{1}^{2} \delta Q
+\end{equation*}
+
+Para calcular o integral é útil definir uma grandeza denominada \textbf{taxa de transferência de calor} dada por:
+\begin{equation*}
+    \dot{Q} = \frac{\delta Q}{dt}
+\end{equation*}
+sendo assim a energia transferida por calor entre os instantes $t_1$ e $t_2$ dada por:
+\begin{equation*}
+    Q = \int_{t_1}^{t_2} \dot{Q}\,dt
+\end{equation*}
+
+\subsubsection{Modos de transferência de calor}
+Existem 3 modos básicos de tranferencia de energia por calor: condução, convecção e radiação.
+
+
+
+\subsection{Primeira Lei da termodinâmica - Balanço energético}
+
+Das experiencia de Joule, entre outros, surgiu a primeira lei da termodinâmica:
+\begin{center}
+    \noindent\fbox{
+        \parbox{0.8\textwidth}{             \centering\textit{
+                A variação de \textbf{energia total} de um sistema fechado é igual à diferenca entre a energia transderida para o sistema sobre a forma de calor e o trabalho realizado pelo sistema sobre a vizinhança.
+            }
+        }
+    }
+\end{center}
+
+Esta é expressa pela equação:
+\begin{equation}
+    \Delta U = Q - W
+\end{equation}
+em que o significado das variáveis está expresso na tabela \ref{tab:1-lei-variaveis}.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{llc}
+        \hline
+        Símbolo & Variável & Unidades \\
+        \hline
+        $\Delta E$ & Variação de energia total & Joule (\unit{J}) \\
+        $Q$ & Energia transferida para o sistema por calor & Joule (\unit{J}) \\
+        $W$ & Energia transferida para a vizinhança por trabalho do sistema & Joule (\unit{J}) \\
+        \hline
+
+    \end{tabular}
+    
+    \caption{Variáveis na 1ª Lei da Termodinâmica}
+    \label{tab:1-lei-variaveis}
+\end{table}
+
+
+
+\subsection{Análise de Ciclos}
+Quando são analisados ciclos de um sistema, a variação de energia é nula.
+\begin{gather*}
+    \cancelto{0}{\Delta E} = Q - W \\
+    \Leftrightarrow Q = W
+\end{gather*}
+
+Se considerarmos o calor de entrada $Q_{in}$ e o calor de saída $Q_{out}$ como quantidades positivas, o trabalho total é dado por:
+\begin{equation*}
+    W_{ciclo} = Q_{in} - Q_{out}
+\end{equation*}
+
+\subsubsection{Ciclos de Potência}
+Um ciclo de potência é uma série de processos que converte energia térmica em trabalho. A eficiência térmica (rendimento) do ciclo é calculado com a equação:
+\begin{equation}
+    \eta = \frac{W_{ciclo}}{Q_{in}}
+\end{equation}
+
+\subsubsection{Ciclos de refrigeração e bombas de calor}
+Um ciclo de refrigeração / bomba de calor é um sistema que transmite energia por calor de uma uma fonte para um acomulador, que se encontra a temperatura mais elevada, necessitando um trabalho positivo para tal.
+
+A eficiência (coeficiente de performance) de um \textbf{Ciclo de Refrigeração} é dada por:
+\begin{equation}
+    \beta = \frac{Q_{in}}{W_{cicleo}}
+\end{equation}
+e para uma \textbf{Bomba de Calor} calcula se com:
+\begin{equation}
+    \gamma = \frac{Q_{out}}{W_{ciclo}}
+\end{equation}
+
+\subsubsection{Limitaçóes de eficiência}
+Devido à 2ª Lei da Termodinâmica, que será estudada mais tarde, todos os coeficientes de eficiencia mencionados ($\eta$, $\beta$ e $\gamma$) têm um valor teórico máximo de 1, mas em aplicações reais vão ser sempre menores que 1.

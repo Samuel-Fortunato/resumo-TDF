@@ -1,0 +1,181 @@
+\section{Sistemas e grandezas de estado. Pressão e temperatura.}
+
+\subsection{Sistemas Termodinâmicos}
+
+Um \textbf{sistema termodinâmico} é uma porção do universo
+constituída por matéria e/ou radiação e separada da sua
+\textbf{vizinhança} por paredes reais ou imaginárias, nomeadas
+de \textbf{fronteira}.
+
+\subsubsection{Classificação de Sistemas}
+
+Os sistemas termodinâmicos podem ser classificados como:
+
+\begin{itemize}
+  \item \textbf{Fechados -} Permitem a troca de energia com a vizinhança, mas não de matéria.
+  
+  \item \textbf{Abertos -} Permitem a troca de energia e massa com a vizinhança.
+  
+  \item \textbf{Isolados -} Não permitem a troca de energia nem massa com a vizinhança.
+\end{itemize}
+
+Sistemas fechados são comummente chamados de \textbf{massas de controlo} e sistemas abertos de \textbf{volumes de controlo}
+
+
+
+\subsection{Propriedades}
+
+Uma \textbf{propriedade} é uma caraterística de um sistema termodinâmico à qual se pode atribuir valores quantitativos em cada instante sem conhecer os processos pelos quais o sistema passou.
+
+Isto é, uma \textbf{propriedade} é uma caraterística mensurável de um sistema, que é independente do que aconteceu antes no sistema.
+
+Ao conjunto dos valores das propriedades de um sistema chama-se \textbf{estado do sistema}.
+
+\subsubsection{Propriedades intensivas e extensivas}
+
+As propriedades de um sistema dividem-se em:
+
+\begin{itemize}
+    \item \textbf{Propriedades intensivas - } propriedades cuja magnitude é independente do tamanho do sistema.
+    
+    \textit{e.g.:} Temperatura, $T$; Densidade, $\rho$; Temperatura de fusão, $T_m$,
+    
+    \item \textbf{Propriedade extensivas - } propriedades cuja magnitude é aditiva para subsistemas.
+
+    \textit{e.g.:} Massa, $m$; Volume, $V$; Rigidez da mola, $k$,
+    
+\end{itemize}
+
+
+
+\subsection{Equilíbrio}
+
+Diz-se que um sistema está num \textbf{estado de equilibrio termodinamico} quando as condições da vizinhança são fixas e o sistema evoluiu para um estado que não varia com o tempo e que é independente dos estados anteriores.
+
+Este estado só se alterará se a vizinhança do sistema for sujeita a alterações.
+
+
+
+\subsection{Sistemas compressiveis simples}
+
+Quando analisamos \textbf{sistemas compressíveis simples} (sistemas macroscópicamente homogeneos, isotropicos e não carregados) aplica se o seguinte \textbf{postulado de estado}:
+
+\begin{quotation}
+    O estado de um \textbf{sistema compressível simples} é completamente especificado por duas propriedades independentes e pela massa de cada substãncia que o constitui.
+\end{quotation}
+
+Um sistema compressível simples é geralmente caracterizado pela pressão, $p$, temperatura, $T$, volume, $V$, e pela sua composição (\textit{e.g.} massa dos elementos). Logo, pelo \textit{postulado de estado} uma das propriedades do sistema é determinadas pelas outras duas atraves de uma \textbf{equação de estado}:
+\begin{equation*}
+    X_3 = f(X_1, X_2)
+\end{equation*}
+onde $X_i$ representa uma variável de estado.
+
+
+
+\subsection{Processos}
+
+Um processo é a mudança que um sistema sofre de um estado de equilibrio para outro. Se qualquer propriedade do sistema muda diz se que ocorre um processo.
+
+\paragraph{Processo Adiabático}
+Processo que ocorre sem transferência de energia por calor.
+
+\paragraph{Processo Diabático}
+O oposto de adiabático, processo em que ocorre tranferência de energia por calor.
+
+\paragraph{Processo Isotérmico}
+Processo ao longo do qual não há mudança de temperatura.
+
+\paragraph{Processo Isocórico}
+Processo que ocorre sem alteração de volume do sistema.
+
+\paragraph{Processo Isopícnico}
+Processo a densidade constante
+
+\paragraph{Processo Politrópico}
+Processo que obedece a relação: $PV^n = \text{constante} $
+
+
+\subsection{Volume Específico}
+
+O \textbf{Volume Específico ($ v $)} é definido como o inverso da densidade:
+\begin{equation*}
+    v = \frac{1}{\rho}
+\end{equation*}
+sendo a densidade dada pela expressão já conhecida: $\rho = \frac{m}{V}$
+
+
+
+\subsection{Pressão}
+
+A \textbf{Pressão ($ P $ ou $ p $)} é a força exercida perpendicularmente por unidade de área de uma superfície.
+
+\begin{equation*}
+    p = \lim_{A \to A'}\left(\frac{F_{normal}}{A}\right)
+\end{equation*}
+sendo $A'$ a menor área para a qual existe um valor definido da expressão.\footnote{$A'$ é suficientemente grande para efeitos de partículas individuais serem desprezáveis, mas suficientemente pequena para ser considerada um ponto}
+
+\subsubsection{Medições de Pressão}
+
+\begin{itemize}
+    \item \textbf{Pressão Absoluta -} obtida por aplicação direta da fórmula acima. É medida em referencia a um vácuo absoluto, onde a pressão é 0.
+    
+    \item \textbf{Pressão Atmosférica -} pressão (absoluta) do ar na atmosfera terrestre, que varia principalmente com a altitude, entre outros fatores. Tem o valor ao nível do mar tabelado de: \qty{101,325}{Pa}, \qty{1013.25}{mbar}, \qty{760}{mmHg}, \qty{29.9212}{inHg} ou \qty{14.696}{psi}.
+    
+    \item \textbf{Pressão Manométrica -} pressão medida relativamente à pressão atmosférica local. Tem o valor zero quando a pressão do fluido é igual à pressão atmosférica.
+    \[ p_{gauge} = p_{abs} - p_{atm} \]
+    
+    \item \textbf{Pressão de Vácuo -} módulo de uma pressão manométrica negativa. Usada quando a pressao a a ser medida é inferior à atmosférica, isto é, existe um vácuo.
+\end{itemize}
+
+\subsubsection{Equilibrio hidrostático}
+
+Quando um fluído se encontra num campo gravítico $\vec{g}$, a pressão cresce na direção do campo. A equação obtém-se aplicando a 2ª Lei de Newton a um volume infinitesimal.
+\begin{equation*} \label{eq:equilibrio-hidrostatico}
+    d\vec{F}_{press} = -\left(\frac{\partial p}{\partial x} \hat{i} + \frac{\partial p}{\partial y} \hat{j} + \frac{\partial p}{\partial z} \hat{k} \right) dx dy dz
+\end{equation*}
+obtendo-se, de forma mais geral:
+\begin{equation*}
+\label{equation:hidrostatic-equilb}
+    \vec{\nabla} p = \rho \vec{g}
+\end{equation*}
+
+
+
+\subsection{Temperatura}
+\subsubsection{Escalas de temperatura}
+
+Para a definição de uma escala de temperatura e necessário a escolha de dois estados de referência, chamados \textbf{pontos fixos}. O estado escolhido é normalmente o ponto triplo da àgua.
+
+\paragraph{Escala Kelvin}
+Baseia-se no ponto triplo da àgua, atribuindo o valor de \qty{273.16}{K} à temperatura nesse estado. O valor de \qty{0}{K} representa o zero absoluto, e temperaturas inferiores a esta não estão definidas.
+
+\paragraph{Celcius}
+Baseia-se no \textbf{ponto de fusão do gelo} e no \textbf{ponto de ebulição da água} atribuindo-lhes, respetivamente, os valores de \qty{0}{\degreeCelsius} e \qty{100}{\degreeCelsius}
+
+\paragraph{Fahrenheit e Rankine}
+Baseadas na escala Kelvin, e menos comuns. Relacionam-se através das equações:
+
+\begin{align*}
+    \degree R & = 1.8 \cdot K \\
+    \degree F & = \degree R - 459.67 \\
+    \degree F & = 1.8 \cdot \degree C + 32 
+\end{align*}
+
+\noindent A relação entre as 4 escalas nos pontos fixos é representada na tabela \ref{tab:temp-units}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{lcccc}
+        \hline
+        & \unit{\kelvin} & \degree C & \degree R & \degree F \\
+        \hline
+        Zero Absoluto & 0.00 & -273.15 & 0.00 & -459.67 \\
+        Ponto de fusão & 273.15 & 0.00 & 491.67 & 32.0 \\
+        Ponto triplo & 273.16 & 0.01 & 491.69 & 32.02 \\
+        Ponto de Ebulição & 373.15 & 100.0 & 671.67
+ & 212 \\
+        \hline
+    \end{tabular}
+    \caption{Relações entre escalas de temperatura}
+    \label{tab:temp-units}
+\end{table}

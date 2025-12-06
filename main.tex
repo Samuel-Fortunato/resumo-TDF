@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage[portuguese]{babel}
+\usepackage{indentfirst}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{textcomp, gensymb}
+\usepackage{cancel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[format=plain,justification=centering]{caption}
+\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+
+\title{TDF}
+\author{Samuel Fortunato}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\include{info}
+
+\part{Termodinâmica}
+\include{Termodinamica/leis}
+\include{Termodinamica/sistemas-press-temp}
+\include{Termodinamica/energia-calor-trabalho}
+\include{Termodinamica/diagramas-de-fase}
+\include{Termodinamica/gases-ideiais}
+\include{Termodinamica/segunda-lei}
+\include{Termodinamica/entropia}
+
+\part{Dinâmica de Fluidos}
+\include{dinamica-de-fluidos/introducao}
+\include{dinamica-de-fluidos/rel-integrais}
+
+\end{document}
