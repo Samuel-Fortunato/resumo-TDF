@@ -22,7 +22,7 @@ As unidades de $Q$ são \unit{\meter\cubed\per\second} e de $\dot{m}$ são \unit
 
 
 
-\subsection{Teorema do transporte de Reynolds}
+\subsection{Teorema do transporte de Reynolds  (pag. 139)}
 Seja $B$ uma propriedade qualquer do fluido e $\beta = \frac{dB}{dm}$ o seu valor específico, a quantidade total de $B$ no volume de controlo é dada por:
 \begin{equation*}
     B_{CV} = \int_{CV}\beta\,dm = \int_{CV}\beta\rho\,d\mathcal{V}
@@ -52,7 +52,49 @@ onde $\dot{m}_i = \rho_iA_iV_i$, obtendo-se assim:
     \frac{dB_{Sist}}{dt} = \int_{CV}\frac{\partial}{\partial t}(\beta\rho)\,d\mathcal{V} + \sum(\rho_i\beta_iV_iA_i)_{out} - \sum(\rho_i\beta_iV_iA_i)_{in}
 \end{equation*}
 
-\subsubsection{Teorema do transporte de Reynolds aplicado à massa}
+
+
+\subsection{Equação da conservação da massa (pag. 147)}
 Até agora usamos $B$ para uma qualquer propriedade do sistema, e $\beta$ para o valor especifico (por unidade de massa) da propriedade.
 
-Aplicando agora o teorema do transporte de Reynolds à massa $m$, onde a massa específica $\frac{dm}{dm} = 1$ obtém-se a \textbf{equação da conservação da massa}
+Aplicando agora o teorema do transporte de Reynolds à massa $m$, onde a massa específica $\frac{dm}{dm} = 1$ obtém-se a \textbf{equação da conservação da massa}, com volume fixo:
+
+\begin{equation*}
+    \frac{dm_{Sist}}{dt} = 0 = \int_{CV}\frac{\partial\rho}{\partial t}\,d\mathcal{V} + \int_{CS}\rho(\vec{V}\cdot\hat{n})\,dA
+\end{equation*}
+
+No caso especifico de fluxo estável, a equação da conservação da massa reduz-se a:
+\begin{equation*}
+    \int_{CS}\rho(\vec{V}\cdot\hat{n})\,dA = 0
+\end{equation*}
+que, para um sistema com entradas e saídas unidimensionais, pode escrever-se como:
+\begin{equation*}
+    \sum(\rho_i A_i V_i)_{out} - \sum(\rho_i A_i V_i)_{in} = 0
+\end{equation*}
+ou seja, para um fluxo estável, o fluxo de massa que entra é igual ao fluxo de massa que sai.
+
+
+
+\subsection{Equação do momento linear (pag. 152)}
+Aplicando o teorema do transporte de Reynolds ao momento linear $\vec{p} = m\vec{V}$, onde o valor especifico é a velocidade $\vec{V}$, obtém-se a seguinte relação para o momento linear:
+\begin{equation*}
+    \frac{d\vec{p}_{Sist}}{dt} = \sum \vec{F} = \int_{CV}\frac{\partial(\rho\vec{V})}{\partial t}\,d\mathcal{V} + \int_{CS}\rho\vec{V}(\vec{V}\cdot\hat{n})\,dA
+\end{equation*}
+sendo esta válida para um volume de controlo fixo, com a velocidade observada num referencial inercial.
+
+\subsubsection{Força total da pressão}
+As forças de superficie que atuam num volume de controlo são devidas (1) a forças exercidas por corpos sólidos que intersetam o volume de controlo (ex. pistão), e (2) a forças de pressão e viscosidade exercidas pelo fluido envolvente.
+
+A força total da pressão é dada por:
+\begin{equation*}
+    \vec{F}_{press} = \sum\vec{F} = -\int_{CS}(p-p_a)\hat{n}\,dA = -\int_{CS}p_{gauge}\hat{n}\,dA
+\end{equation*}
+
+
+
+\subsection{Equação de Bernoulli (pag. 168)}
+\begin{equation*}
+    \boxed{
+        \frac{p_1}{\rho} + \frac{1}{2}V_1^2 + gz_1 = \frac{p_2}{\rho} + \frac{1}{2}V_2^2 + gz_2 = \text{const}
+    }
+\end{equation*}
