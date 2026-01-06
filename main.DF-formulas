@@ -1,0 +1,15 @@
+\textbf {Caudal e fluxo de massa (aprox. unidimensional)}
+
+\begin {equation*} \boxed {  \dot {m} = \rho Q =\rho V A  } \end {equation*}
+
+
+\textbf {EQ. Transporte Reynolds}
+
+\begin {equation*} \boxed {  \frac {dB_{Sist}}{dt} = \int _{CV}\frac {\partial }{\partial t}(\beta \rho )\,d\mathcal {V} + \left .\sum \beta _i \dot {m}_i\right |_{out} - \left .\sum \beta _i \dot {m}_i\right |_{in}  } \end {equation*}
+
+
+\textbf {Força total da pressão (unidimensional)}
+
+\begin {equation*} \boxed {  \vec {F}_{press} = -\left (\left .\sum p_i A_i\right |_{out} - \left .\sum p_i A_i\right |_{in}\right ) = \left .\sum p_i A_i\right |_{in} - \left .\sum p_i A_i\right |_{out}  } \end {equation*}
+
+

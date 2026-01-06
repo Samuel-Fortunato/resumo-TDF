@@ -16,6 +16,17 @@
 \counterwithin*{section}{part}
 \usepackage{tcolorbox}
 \tcbuselibrary{theorems}
+\usepackage{collect}
+
+\newcommand{\collectequation}[2]{
+    \begin{collect*}{DF-formulas}{}{}{\textbf{#1}}{}
+        \begin{equation*}
+            \boxed{
+                #2
+            }
+        \end{equation*}
+    \end{collect*}
+}
 
 \title{TDF}
 \author{Samuel Fortunato}
@@ -37,7 +48,10 @@
 \include{termodinamica/entropia}
 
 \part{Dinâmica de Fluidos}
+\definecollection{DF-formulas}
 \include{dinamica-de-fluidos/introducao}
 \include{dinamica-de-fluidos/rel-integrais}
+
+\includecollection{DF-formulas}
 
 \end{document}

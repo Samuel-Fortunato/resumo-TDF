@@ -16,7 +16,12 @@ Para obter o \textbf{fluxo de massa}, multiplica-se o fluxo de volume pela densi
 \begin{equation} \label{eq:mass-flow-rate}
     \dot{m} = \frac{dm}{dt} = \int_S \rho\vec{V}\cdot\hat{n}\,dA
 \end{equation}
-Por convenção define-se $\vec{n}$ como o vetor normal que aponta para fora. Assim sendo, $Q$ e $\dot{m}$ indicam fluxo para fora quando são positivos, e para dentro quando são negativos.
+Se a densididade e a velocidade forem uniformes na superfície, então obtém se a aproximação unidimensional:
+\collectequation{Caudal e fluxo de massa (aprox. unidimensional)}{
+    \dot{m} = \rho Q =\rho V A
+}
+
+Por convenção define-se $\hat{n}$ como o vetor normal que aponta para fora. Assim sendo, $Q$ e $\dot{m}$ indicam fluxo para fora quando são positivos, e para dentro quando são negativos.
 
 As unidades de $Q$ são \unit{\meter\cubed\per\second} e de $\dot{m}$ são \unit{\kilogram\per\second}
 
@@ -30,9 +35,7 @@ Seja $B$ uma propriedade qualquer do fluido e $\beta = \frac{dB}{dm}$ o seu valo
 
 Interessa-nos saber a taxa de variação temporal da propriedade $B$, e esta é dada pelo \textbf{Teorema do transporte de Reynolds}:
 \begin{equation}
-    \boxed{
-        \frac{dB_{Sist}}{dt} = \frac{d}{dt}\left( \int_{CV}\beta\rho\,d\mathcal{V} \right) + \int_{CS}\beta\rho(\vec{V}\cdot\hat{n})\,dA
-    }
+    \frac{dB_{Sist}}{dt} = \frac{d}{dt}\left( \int_{CV}\beta\rho\,d\mathcal{V} \right) + \int_{CS}\beta\rho(\vec{V}\cdot\hat{n})\,dA
 \end{equation}
 onde $\vec{V}$ é a \textbf{velocidade relativa} do fluido relativamente superfície do volume de controlo. CV é o volume de controlo e CS é a superfície de controlo.
 
@@ -42,11 +45,11 @@ Se o volume for fixo a derivada temporal passa para dentro do integral, obtendo-
 \end{equation*}
 
 Em muitos casos o volume é fixo, e tem um número definido de entradas e saidas unidimensionais - a velocidade é perpendicular a cada secção e as propriedades são uniformes em cada secção. Nestes casos, o teorema de transporte de Reynolds pode escrever-se como:
-\begin{equation}
-    \boxed{
-        \frac{dB_{Sist}}{dt} = \int_{CV}\frac{\partial}{\partial t}(\beta\rho)\,d\mathcal{V} + \left.\sum\beta_i \dot{m}_i\right|_{out} - \left.\sum\beta_i \dot{m}_i\right|_{in}
-    }
-\end{equation}
+
+\collectequation{EQ. Transporte Reynolds}{
+    \frac{dB_{Sist}}{dt} = \int_{CV}\frac{\partial}{\partial t}(\beta\rho)\,d\mathcal{V} + \left.\sum\beta_i \dot{m}_i\right|_{out} - \left.\sum\beta_i \dot{m}_i\right|_{in}
+}
+
 onde $\dot{m}_i = \rho_iA_iV_i$, obtendo-se assim:
 \begin{equation*}
     \frac{dB_{Sist}}{dt} = \int_{CV}\frac{\partial}{\partial t}(\beta\rho)\,d\mathcal{V} + \sum(\rho_i\beta_iV_iA_i)_{out} - \sum(\rho_i\beta_iV_iA_i)_{in}
@@ -70,10 +73,6 @@ No caso especifico de fluxo estável, a equação da conservação da massa redu
 que, para um sistema com entradas e saídas unidimensionais, pode escrever-se como:
 \begin{equation*}
     \sum(\rho_i A_i V_i)_{out} - \sum(\rho_i A_i V_i)_{in} = 0
-\end{equation*}
-ou seja, para um fluxo estável, o fluxo de massa que entra é igual ao fluxo de massa que sai, ou seja, pela equação \eqref{eq:mass-flow-rate}:
-\begin{equation*}
-    \dot{m}_{in} = \dot{m}_{out}
 \end{equation*}
 
 
@@ -120,7 +119,7 @@ A força total da pressão é dada por:
 \end{equation}
 Se a pressão for uniforme, $p=p_a$ em toda a superficie de controlo, então a força total de pressão é nula.
 \begin{equation*}
-    \vec{F}_{press} = -p_a\int_{CS}\hat{n}\,dA \boxed{= 0}
+    \vec{F}_{press} = -p_a\int_{CS}\hat{n}\,dA\ \tcboxmath[left=2pt, right=2pt]{= 0}
 \end{equation*}
 
 \begin{tcolorbox}[
@@ -135,9 +134,14 @@ Se a pressão for uniforme, $p=p_a$ em toda a superficie de controlo, então a f
 
 Muitos problemas podem ser simplificados se a pressão uniforme, $p_a$ for subtraída de todas as pressões envolvidas, sendo assim considerada, por definição desta a \textbf{pressão manométrica}. A equação da força total da pressão pode então ser escrita como:
 \begin{equation} \label{eq:pressure-forces-gage}
-    \boxed{\vec{F}_{press} = -\int_{CS}(p-p_a)\hat{n}\,dA = -\int_{CS}p_{gauge}\hat{n}\,dA}
+    \vec{F}_{press} = -\int_{CS}(p-p_a)\hat{n}\,dA = -\int_{CS}p_{gauge}\hat{n}\,dA
 \end{equation}
 Um exemplo de pressão uniforme, $p_a$ é a pressão atmosférica, que atua em todas as superfícies expostas ao ar.
+
+Para um volume de controlo com entradas e saídas unidimensionais, a força total da pressão pode ser escrita como:
+\collectequation{Força total da pressão (unidimensional)}{
+    \vec{F}_{press} = -\left(\left.\sum p_i A_i\right|_{out} - \left.\sum p_i A_i\right|_{in}\right) = \left.\sum p_i A_i\right|_{in} - \left.\sum p_i A_i\right|_{out}
+}
 
 
 
