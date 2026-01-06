@@ -1,8 +1,10 @@
-\newcommand{\collectequation}[3]{
-    \begin{collect*}{#1}{}{}{\paragraph{#2}}{}
+\newcommand{\collectequation}[4]{
+    \begin{collect*}{#1}{}{}{
+        \noindent\textbf{#2} \\ \indent #3
+    }{}
         \begin{equation*}
             \boxed{
-                #3
+                #4
             }
         \end{equation*}
     \end{collect*}
@@ -26,4 +28,22 @@
     ]
         #3
     \end{tcolorbox}
+}
+
+\newcommand{\mathwarn}[1]{
+    \tcboxmath[
+        colback=yellow!15, colframe=yellow!80!orange,
+        top=0pt, bottom=0pt, left=0pt, right=0pt
+    ]{
+        #1
+    }
+}
+
+\newcommand{\matherr}[1]{
+    \tcboxmath[
+        colback=red!15, colframe=red!80!orange,
+        top=0pt, bottom=0pt, left=0pt, right=0pt
+    ]{
+        #1
+    }
 }

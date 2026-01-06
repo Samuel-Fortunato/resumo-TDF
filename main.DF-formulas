@@ -1,14 +1,24 @@
-\paragraph {Caudal e fluxo de massa (aprox. unidimensional)}
+ \noindent \textbf {Caudal e fluxo de massa} \\ \indent Aprox. para entradas e saídas unidimensionais 
 
 \begin {equation*} \boxed {  \dot {m} = \rho Q =\rho V A  } \end {equation*}
 
 
-\paragraph {EQ. Transporte Reynolds}
+ \noindent \textbf {Teorema do transporte de Reynolds} \\ \indent Forma integral 
+
+\begin {equation*} \boxed {  \frac {dB_{Sist}}{dt} = \frac {d}{dt}\left ( \int _{CV}\beta \rho \,d\mathcal {V} \right ) + \int _{CS}\beta \rho (\vec {V}\cdot \hat {n})\,dA  } \end {equation*}
+
+
+ \noindent \textbf {Transporte Reynolds} \\ \indent Volume constante, entradas e saidas unidimensionais 
 
 \begin {equation*} \boxed {  \frac {dB_{Sist}}{dt} = \int _{CV}\frac {\partial }{\partial t}(\beta \rho )\,d\mathcal {V} + \left .\sum \beta _i \dot {m}_i\right |_{out} - \left .\sum \beta _i \dot {m}_i\right |_{in}  } \end {equation*}
 
 
-\paragraph {Força total da pressão (unidimensional)}
+ \noindent \textbf {Equação do momento linear} \\ \indent  Fluxo estável ($\vec {V}=\text {cte}$) e incompressível ($\rho =\text {cte}$), entradas e saídas unidimensionais.  
+
+\begin {equation*} \boxed {  \sum \vec {F} = \int _{CV}\cancelto {0}{\frac {\partial \vec {V}}{\partial t}}\rho \,d\mathcal {V} + \left .\sum \vec {V}_i \dot {m}_i\right |_{out} - \left .\sum \vec {V}_i \dot {m}_i\right |_{in}  } \end {equation*}
+
+
+ \noindent \textbf {Força total da pressão} \\ \indent Entradas e saídas unidimensionais 
 
 \begin {equation*} \boxed {  F_{x\ press} = \sum p_{i} A_i (\hat {n}\cdot \vec {e}_x)  } \end {equation*}
 

@@ -17,8 +17,10 @@ Para obter o \textbf{fluxo de massa}, multiplica-se o fluxo de volume pela densi
     \dot{m} = \frac{dm}{dt} = \int_S \rho\vec{V}\cdot\hat{n}\,dA
 \end{equation}
 Se a densididade e a velocidade forem uniformes na superfície, então obtém se a aproximação unidimensional:
-\collectequation{DF-formulas}{Caudal e fluxo de massa (aprox. unidimensional)}{
-    \dot{m} = \rho Q =\rho V A
+\collectequation{DF-formulas}
+    {Caudal e fluxo de massa}
+    {Aprox. para entradas e saídas unidimensionais}{
+        \dot{m} = \rho Q =\rho V A
 }
 
 Por convenção define-se $\hat{n}$ como o vetor normal que aponta para fora. Assim sendo, $Q$ e $\dot{m}$ indicam fluxo para fora quando são positivos, e para dentro quando são negativos.
@@ -34,9 +36,11 @@ Seja $B$ uma propriedade qualquer do fluido e $\beta = \frac{dB}{dm}$ o seu valo
 \end{equation*}
 
 Interessa-nos saber a taxa de variação temporal da propriedade $B$, e esta é dada pelo \textbf{Teorema do transporte de Reynolds}:
-\begin{equation}
-    \frac{dB_{Sist}}{dt} = \frac{d}{dt}\left( \int_{CV}\beta\rho\,d\mathcal{V} \right) + \int_{CS}\beta\rho(\vec{V}\cdot\hat{n})\,dA
-\end{equation}
+\collectequation{DF-formulas}
+    {Teorema do transporte de Reynolds}
+    {Forma integral}{
+        \frac{dB_{Sist}}{dt} = \frac{d}{dt}\left( \int_{CV}\beta\rho\,d\mathcal{V} \right) + \int_{CS}\beta\rho(\vec{V}\cdot\hat{n})\,dA
+}
 onde $\vec{V}$ é a \textbf{velocidade relativa} do fluido relativamente superfície do volume de controlo. CV é o volume de controlo e CS é a superfície de controlo.
 
 Se o volume for fixo a derivada temporal passa para dentro do integral, obtendo-se:
@@ -46,8 +50,10 @@ Se o volume for fixo a derivada temporal passa para dentro do integral, obtendo-
 
 Em muitos casos o volume é fixo, e tem um número definido de entradas e saidas unidimensionais - a velocidade é perpendicular a cada secção e as propriedades são uniformes em cada secção. Nestes casos, o teorema de transporte de Reynolds pode escrever-se como:
 
-\collectequation{DF-formulas}{EQ. Transporte Reynolds}{
-    \frac{dB_{Sist}}{dt} = \int_{CV}\frac{\partial}{\partial t}(\beta\rho)\,d\mathcal{V} + \left.\sum\beta_i \dot{m}_i\right|_{out} - \left.\sum\beta_i \dot{m}_i\right|_{in}
+\collectequation{DF-formulas}
+    {Transporte Reynolds}
+    {Volume constante, entradas e saidas unidimensionais}{
+        \frac{dB_{Sist}}{dt} = \int_{CV}\frac{\partial}{\partial t}(\beta\rho)\,d\mathcal{V} + \left.\sum\beta_i \dot{m}_i\right|_{out} - \left.\sum\beta_i \dot{m}_i\right|_{in}
 }
 
 onde $\dot{m}_i = \rho_iA_iV_i$, obtendo-se assim:
@@ -83,11 +89,20 @@ que, para um sistema com entradas e saídas unidimensionais, pode escrever-se co
     Na próxima equação, é usada a notação $\vec{p}$ para o momento linear, que não deve ser confundida com a notação usada nos restantes capítulos onde $p$ (normalmente representada sem vetor) que representa a pressão.
 }
 
-Aplicando o teorema do transporte de Reynolds ao momento linear $\tcboxmath[colback=yellow!15, colframe=yellow!80!orange, top=0pt, bottom=0pt, left=0pt, right=0pt]{\vec{p} = m\vec{V}}$, onde o valor especifico é a velocidade $\vec{V}$, obtém-se a seguinte relação para o momento linear:
+Usando a 3ª lei de Newton: $\mathwarn{\vec{F}_R = \dot{\vec{p}}}$ e aplicando o teorema do transporte de Reynolds ao momento linear $\mathwarn{\vec{p} = m\vec{V}}$, onde o valor especifico é a velocidade ($\beta = d\vec{p}/dm = \vec{V}$), obtém-se a seguinte relação para o momento linear:
 \begin{equation*}
-    \frac{d\vec{p}_{Sist}}{dt} = \sum \vec{F} = \int_{CV}\frac{\partial(\rho\vec{V})}{\partial t}\,d\mathcal{V} + \int_{CS}\rho\vec{V}(\vec{V}\cdot\hat{n})\,dA
+    \sum \vec{F} = \frac{d\vec{p}_{Sist}}{dt} = \int_{CV}\frac{\partial(\rho\vec{V})}{\partial t}\,d\mathcal{V} + \int_{CS}\rho\vec{V}(\vec{V}\cdot\hat{n})\,dA
 \end{equation*}
 sendo esta válida para um volume de controlo fixo, com a velocidade observada num referencial inercial.
+
+Para um sistema com entradas e saídas unidimensionais, presente na maioria dos exercícios, usa se a versão simplificada:
+\collectequation{DF-formulas}
+    {Equação do momento linear}{
+        Fluxo estável ($\vec{V}=\text{cte}$) e incompressível ($\rho=\text{cte}$), entradas e saídas unidimensionais.
+    }{
+        \sum \vec{F} = \int_{CV}\cancelto{0}{\frac{\partial\vec{V}}{\partial t}}\rho\,d\mathcal{V} + \left.\sum \vec{V}_i \dot{m}_i\right|_{out} - \left.\sum \vec{V}_i \dot{m}_i\right|_{in}
+}
+
 
 O termo $\sum \vec{F}$ representa a soma de todas as forças exercidas no fluído:
 \begin{itemize}
@@ -131,8 +146,10 @@ Muitos problemas podem ser simplificados se a pressão uniforme, $p_a$ for subtr
 Um exemplo de pressão uniforme, $p_a$ é a pressão atmosférica, que atua em todas as superfícies expostas ao ar.
 
 Para um volume de controlo com entradas e saídas unidimensionais, a força total da pressão pode ser escrita como:
-\collectequation{DF-formulas}{Força total da pressão (unidimensional)}{
-    F_{x\ press} = \sum p_{i} A_i (\hat{n}\cdot\vec{e}_x)
+\collectequation{DF-formulas}
+    {Força total da pressão}
+    {Entradas e saídas unidimensionais}{
+        F_{x\ press} = \sum p_{i} A_i (\hat{n}\cdot\vec{e}_x)
 }
 
 \warnbox{ATENÇÃO: Sinais}{
