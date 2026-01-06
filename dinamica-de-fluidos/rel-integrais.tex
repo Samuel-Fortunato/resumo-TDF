@@ -1,6 +1,6 @@
 \section{Relações integrais para um volume de controlo}
 
-\subsection{Caudal (pag. 138)}
+\subsection{Caudal e fluxo de massa (pag. 138)}
 Qual o volume de fluido que atravessa uma superficie $S$ por unidade de tempo? Como $\vec{V}$ varia com a posição, devemos integrar em ordem a $dA$, e ter em conta que a velocidade pode fazer um ângulo $\theta$ com a normal à superficie. Assim sendo, o volume que atravessa a superfície é dado por:
 \begin{equation*}
     d\mathcal{V} = V\,dt\,dA\cos{\theta} = (\vec{V}\cdot\hat{n})\,dA\,dt
@@ -12,7 +12,7 @@ O integral de $d\mathcal{V}$ dá nos o \textbf{caudal} (fluxo de volume):
     Q = \frac{d\mathcal{V}}{dt} = \int_S \vec{V}\cdot\hat{n}\,dA
 \end{equation*}
 
-Para obter o fluxo de massa, multiplica-se o fluxo de volume pela densidade:
+Para obter o \textbf{fluxo de massa}, multiplica-se o fluxo de volume pela densidade:
 \begin{equation*}
     \dot{m} = \frac{dm}{dt} = \int_S \rho\vec{V}\cdot\hat{n}\,dA
 \end{equation*}
@@ -34,7 +34,7 @@ Interessa-nos saber a taxa de variação temporal da propriedade $B$, e esta é 
         \frac{dB_{Sist}}{dt} = \frac{d}{dt}\left( \int_{CV}\beta\rho\,d\mathcal{V} \right) + \int_{CS}\beta\rho(\vec{V}\cdot\hat{n})\,dA
     }
 \end{equation}
-onde $\vec{V}$ é a \textbf{velocidade relativa} do fluido relativamenet superfície do volume de controlo.
+onde $\vec{V}$ é a \textbf{velocidade relativa} do fluido relativamente superfície do volume de controlo. CV é o volume de controlo e CS é a superfície de controlo.
 
 Se o volume for fixo a derivada temporal passa para dentro do integral, obtendo-se:
 \begin{equation*}
@@ -82,13 +82,40 @@ Aplicando o teorema do transporte de Reynolds ao momento linear $\vec{p} = m\vec
 \end{equation*}
 sendo esta válida para um volume de controlo fixo, com a velocidade observada num referencial inercial.
 
+O termo $\sum \vec{F}$ representa a soma de todas as forças exercidas no fluído:
+\begin{itemize}
+    \item \textbf{Forças de superficie} \\
+        Forças que atuam na fronteira do volume de controlo, como:
+        \begin{itemize}
+            \item Forças de pressão
+            \item Forças viscosas (atrito)
+            \item Forças exercidas por corpos sólidos (ex. pistão), sendo estas uma pressão distribuída na superfície de contacto.
+        \end{itemize}
+    \item \textbf{Forças volúmicas} \\
+        Forças que atuam em todo o volume de controlo, como:
+        \begin{itemize}
+            \item Força da gravidade
+            \item Forças eletromagnéticas
+        \end{itemize}
+\end{itemize}
+
 \subsubsection{Força total da pressão}
-As forças de superficie que atuam num volume de controlo são devidas (1) a forças exercidas por corpos sólidos que intersetam o volume de controlo (ex. pistão), e (2) a forças de pressão e viscosidade exercidas pelo fluido envolvente.
+As \textbf{forças de superficie} que atuam num volume de controlo são devidas \textbf{(1)} a forças \textbf{exercidas por corpos sólidos} que intersetam o volume de controlo (ex. pistão), e \textbf{(2)} a forças de \textbf{pressão} e \textbf{viscosidade} exercidas pelo \textbf{fluido envolvente} (quando a superficie de controlo interseta o fluido).
 
 A força total da pressão é dada por:
 \begin{equation*}
-    \vec{F}_{press} = \sum\vec{F} = -\int_{CS}(p-p_a)\hat{n}\,dA = -\int_{CS}p_{gauge}\hat{n}\,dA
+    \vec{F}_{press} = \int_{CS}p(-\hat{n})\,dA
 \end{equation*}
+Se a pressão for uniforme, $p=p_a$ em toda a superficie de controlo, então a força total de pressão é nula.
+\begin{equation*}
+    \vec{F}_{press} = -p_a\int_{CS}\hat{n}\,dA \boxed{= 0}
+\end{equation*}
+
+Muitos problemas podem ser simplificados se a pressão uniforme, $p_a$ for subtraída de todas as pressões envolvidas, sendo assim considerada, por definição desta a \textbf{pressão manométrica}. A equação da força total da pressão pode então ser escrita como:
+\begin{equation*}
+    \boxed{\vec{F}_{press} = -\int_{CS}(p-p_a)\hat{n}\,dA = -\int_{CS}p_{gauge}\hat{n}\,dA}
+\end{equation*}
+Um exemplo de pressão uniforme, $p_a$ é a pressão atmosférica, que atua em todas as superfícies expostas ao ar.
 
 
 
