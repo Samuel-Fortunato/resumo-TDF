@@ -13,9 +13,9 @@ O integral de $d\mathcal{V}$ dá nos o \textbf{caudal} (fluxo de volume):
 \end{equation*}
 
 Para obter o \textbf{fluxo de massa}, multiplica-se o fluxo de volume pela densidade:
-\begin{equation*}
+\begin{equation} \label{eq:mass-flow-rate}
     \dot{m} = \frac{dm}{dt} = \int_S \rho\vec{V}\cdot\hat{n}\,dA
-\end{equation*}
+\end{equation}
 Por convenção define-se $\vec{n}$ como o vetor normal que aponta para fora. Assim sendo, $Q$ e $\dot{m}$ indicam fluxo para fora quando são positivos, e para dentro quando são negativos.
 
 As unidades de $Q$ são \unit{\meter\cubed\per\second} e de $\dot{m}$ são \unit{\kilogram\per\second}
@@ -71,12 +71,24 @@ que, para um sistema com entradas e saídas unidimensionais, pode escrever-se co
 \begin{equation*}
     \sum(\rho_i A_i V_i)_{out} - \sum(\rho_i A_i V_i)_{in} = 0
 \end{equation*}
-ou seja, para um fluxo estável, o fluxo de massa que entra é igual ao fluxo de massa que sai.
+ou seja, para um fluxo estável, o fluxo de massa que entra é igual ao fluxo de massa que sai, ou seja, pela equação \eqref{eq:mass-flow-rate}:
+\begin{equation*}
+    \dot{m}_{in} = \dot{m}_{out}
+\end{equation*}
 
 
 
 \subsection{Equação do momento linear (pag. 152)}
-Aplicando o teorema do transporte de Reynolds ao momento linear $\vec{p} = m\vec{V}$, onde o valor especifico é a velocidade $\vec{V}$, obtém-se a seguinte relação para o momento linear:
+
+\begin{tcolorbox}[
+        width=0.7\textwidth, center,
+        colback=yellow!15, colframe=yellow!80!orange, coltitle=black,
+        title=\textbf{AVISO: Notação}
+    ]
+    Na próxima equação, é usada a notação $\vec{p}$ para o momento linear, que não deve ser confundida com a notação usada nos restantes capítulos onde $p$ (normalmente representada sem vetor)representa a pressão.
+\end{tcolorbox}
+
+Aplicando o teorema do transporte de Reynolds ao momento linear $\tcboxmath[colback=yellow!15, colframe=yellow!80!orange, top=0pt, bottom=0pt, left=0pt, right=0pt]{\vec{p} = m\vec{V}}$, onde o valor especifico é a velocidade $\vec{V}$, obtém-se a seguinte relação para o momento linear:
 \begin{equation*}
     \frac{d\vec{p}_{Sist}}{dt} = \sum \vec{F} = \int_{CV}\frac{\partial(\rho\vec{V})}{\partial t}\,d\mathcal{V} + \int_{CS}\rho\vec{V}(\vec{V}\cdot\hat{n})\,dA
 \end{equation*}
@@ -103,18 +115,28 @@ O termo $\sum \vec{F}$ representa a soma de todas as forças exercidas no fluíd
 As \textbf{forças de superficie} que atuam num volume de controlo são devidas \textbf{(1)} a forças \textbf{exercidas por corpos sólidos} que intersetam o volume de controlo (ex. pistão), e \textbf{(2)} a forças de \textbf{pressão} e \textbf{viscosidade} exercidas pelo \textbf{fluido envolvente} (quando a superficie de controlo interseta o fluido).
 
 A força total da pressão é dada por:
-\begin{equation*}
+\begin{equation} \label{eq:pressure-forces-abs}
     \vec{F}_{press} = \int_{CS}p(-\hat{n})\,dA
-\end{equation*}
+\end{equation}
 Se a pressão for uniforme, $p=p_a$ em toda a superficie de controlo, então a força total de pressão é nula.
 \begin{equation*}
     \vec{F}_{press} = -p_a\int_{CS}\hat{n}\,dA \boxed{= 0}
 \end{equation*}
 
+\begin{tcolorbox}[
+        width=0.7\textwidth, center,
+        colback=red!15, colframe=red!80!orange, coltitle=black,
+        title=\textbf{ATENÇÃO: vetor normal e sinais}
+    ]
+    A convenção para o vetor normal $\hat{n}$ é que este aponta para fora do volume de controlo.
+    
+    A força de pressão atua no sentido oposto ao vetor normal, daí o sinal negativo no vetor normal. Este pode ser colocado no vetor normal, como em \eqref{eq:pressure-forces-abs} ou fora do integral, como em \eqref{eq:pressure-forces-gage}.
+\end{tcolorbox}
+
 Muitos problemas podem ser simplificados se a pressão uniforme, $p_a$ for subtraída de todas as pressões envolvidas, sendo assim considerada, por definição desta a \textbf{pressão manométrica}. A equação da força total da pressão pode então ser escrita como:
-\begin{equation*}
+\begin{equation} \label{eq:pressure-forces-gage}
     \boxed{\vec{F}_{press} = -\int_{CS}(p-p_a)\hat{n}\,dA = -\int_{CS}p_{gauge}\hat{n}\,dA}
-\end{equation*}
+\end{equation}
 Um exemplo de pressão uniforme, $p_a$ é a pressão atmosférica, que atua em todas as superfícies expostas ao ar.
 
 
