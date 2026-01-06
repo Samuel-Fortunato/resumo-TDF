@@ -17,7 +17,7 @@ Para obter o \textbf{fluxo de massa}, multiplica-se o fluxo de volume pela densi
     \dot{m} = \frac{dm}{dt} = \int_S \rho\vec{V}\cdot\hat{n}\,dA
 \end{equation}
 Se a densididade e a velocidade forem uniformes na superfície, então obtém se a aproximação unidimensional:
-\collectequation{Caudal e fluxo de massa (aprox. unidimensional)}{
+\collectequation{DF-formulas}{Caudal e fluxo de massa (aprox. unidimensional)}{
     \dot{m} = \rho Q =\rho V A
 }
 
@@ -46,7 +46,7 @@ Se o volume for fixo a derivada temporal passa para dentro do integral, obtendo-
 
 Em muitos casos o volume é fixo, e tem um número definido de entradas e saidas unidimensionais - a velocidade é perpendicular a cada secção e as propriedades são uniformes em cada secção. Nestes casos, o teorema de transporte de Reynolds pode escrever-se como:
 
-\collectequation{EQ. Transporte Reynolds}{
+\collectequation{DF-formulas}{EQ. Transporte Reynolds}{
     \frac{dB_{Sist}}{dt} = \int_{CV}\frac{\partial}{\partial t}(\beta\rho)\,d\mathcal{V} + \left.\sum\beta_i \dot{m}_i\right|_{out} - \left.\sum\beta_i \dot{m}_i\right|_{in}
 }
 
@@ -79,13 +79,9 @@ que, para um sistema com entradas e saídas unidimensionais, pode escrever-se co
 
 \subsection{Equação do momento linear (pag. 152)}
 
-\begin{tcolorbox}[
-        width=0.7\textwidth, center,
-        colback=yellow!15, colframe=yellow!80!orange, coltitle=black,
-        title=\textbf{AVISO: Notação}
-    ]
-    Na próxima equação, é usada a notação $\vec{p}$ para o momento linear, que não deve ser confundida com a notação usada nos restantes capítulos onde $p$ (normalmente representada sem vetor)representa a pressão.
-\end{tcolorbox}
+\warnbox{AVISO: Notação}{
+    Na próxima equação, é usada a notação $\vec{p}$ para o momento linear, que não deve ser confundida com a notação usada nos restantes capítulos onde $p$ (normalmente representada sem vetor) que representa a pressão.
+}
 
 Aplicando o teorema do transporte de Reynolds ao momento linear $\tcboxmath[colback=yellow!15, colframe=yellow!80!orange, top=0pt, bottom=0pt, left=0pt, right=0pt]{\vec{p} = m\vec{V}}$, onde o valor especifico é a velocidade $\vec{V}$, obtém-se a seguinte relação para o momento linear:
 \begin{equation*}
@@ -122,15 +118,11 @@ Se a pressão for uniforme, $p=p_a$ em toda a superficie de controlo, então a f
     \vec{F}_{press} = -p_a\int_{CS}\hat{n}\,dA\ \tcboxmath[left=2pt, right=2pt]{= 0}
 \end{equation*}
 
-\begin{tcolorbox}[
-        width=0.7\textwidth, center,
-        colback=red!15, colframe=red!80!orange, coltitle=black,
-        title=\textbf{ATENÇÃO: vetor normal e sinais}
-    ]
+\errorbox{ATENÇÃO: vetor normal e sinais}{
     A convenção para o vetor normal $\hat{n}$ é que este aponta para fora do volume de controlo.
     
-    A força de pressão atua no sentido oposto ao vetor normal, daí o sinal negativo no vetor normal. Este pode ser colocado no vetor normal, como em \eqref{eq:pressure-forces-abs} ou fora do integral, como em \eqref{eq:pressure-forces-gage}.
-\end{tcolorbox}
+    A força de \textbf{pressão atua de fora para dentro} do volume de controlo, ou seja, no sentido oposto ao vetor normal, daí o sinal negativo. Este pode ser colocado no vetor normal, como em \eqref{eq:pressure-forces-abs} ou fora do integral, como em \eqref{eq:pressure-forces-gage}.
+}
 
 Muitos problemas podem ser simplificados se a pressão uniforme, $p_a$ for subtraída de todas as pressões envolvidas, sendo assim considerada, por definição desta a \textbf{pressão manométrica}. A equação da força total da pressão pode então ser escrita como:
 \begin{equation} \label{eq:pressure-forces-gage}
@@ -139,8 +131,23 @@ Muitos problemas podem ser simplificados se a pressão uniforme, $p_a$ for subtr
 Um exemplo de pressão uniforme, $p_a$ é a pressão atmosférica, que atua em todas as superfícies expostas ao ar.
 
 Para um volume de controlo com entradas e saídas unidimensionais, a força total da pressão pode ser escrita como:
-\collectequation{Força total da pressão (unidimensional)}{
-    \vec{F}_{press} = -\left(\left.\sum p_i A_i\right|_{out} - \left.\sum p_i A_i\right|_{in}\right) = \left.\sum p_i A_i\right|_{in} - \left.\sum p_i A_i\right|_{out}
+\collectequation{DF-formulas}{Força total da pressão (unidimensional)}{
+    F_{x\ press} = \sum p_{i} A_i (\hat{n}\cdot\vec{e}_x)
+}
+
+\warnbox{ATENÇÃO: Sinais}{
+    O sinal positivo ou negativo depende da orientação do vetor normal e da direção positiva do eixo.
+
+    \begin{equation*}
+        (\hat{n}\cdot\vec{e}_x) = \begin{cases}
+            +1 & \text{$\hat{n}$ no sentido do eixo} \\
+            -1 & \text{$\hat{n}$ no sentido oposto ao eixo} \\
+            0 & \text{$\hat{n}$ perpendicular ao eixo} \\
+            \cos{\theta} & \text{caso geral}
+        \end{cases}
+    \end{equation*}
+
+    A \textbf{pressão} atua sempre no sentido \textbf{de fora para dentro} do volume de controlo.
 }
 
 

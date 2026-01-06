@@ -1,32 +1,7 @@
 \documentclass{article}
-\usepackage{graphicx} % Required for inserting images
 
-\usepackage[portuguese]{babel}
-\usepackage{indentfirst}
-\usepackage{siunitx}
-\usepackage{amsmath}
-\usepackage{textcomp, gensymb}
-\usepackage{cancel}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage[format=plain,justification=centering]{caption}
-\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
-\usepackage{hyperref}
-\usepackage{chngcntr}
-\counterwithin*{section}{part}
-\usepackage{tcolorbox}
-\tcbuselibrary{theorems}
-\usepackage{collect}
-
-\newcommand{\collectequation}[2]{
-    \begin{collect*}{DF-formulas}{}{}{\textbf{#1}}{}
-        \begin{equation*}
-            \boxed{
-                #2
-            }
-        \end{equation*}
-    \end{collect*}
-}
+\input{utils/packages.tex}
+\input{utils/commands.tex}
 
 \title{TDF}
 \author{Samuel Fortunato}
@@ -49,9 +24,11 @@
 
 \part{Dinâmica de Fluidos}
 \definecollection{DF-formulas}
+
 \include{dinamica-de-fluidos/introducao}
 \include{dinamica-de-fluidos/rel-integrais}
 
+\section{Cheat Sheet - Fórmulas essenciais}
 \includecollection{DF-formulas}
 
 \end{document}
