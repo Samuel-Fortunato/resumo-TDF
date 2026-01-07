@@ -1,0 +1,26 @@
+\section{Caudal e fluxo de massa (pag. 138)}
+Qual o volume de fluido que atravessa uma superficie $S$ por unidade de tempo? Como $\vec{V}$ varia com a posição, devemos integrar em ordem a $dA$, e ter em conta que a velocidade pode fazer um ângulo $\theta$ com a normal à superficie. Assim sendo, o volume que atravessa a superfície é dado por:
+\begin{equation*}
+    d\mathcal{V} = V\,dt\,dA\cos{\theta} = (\vec{V}\cdot\hat{n})\,dA\,dt
+\end{equation*}
+sendo $\mathcal{V}$ o volume de fluido. (não confundir com $\vec{V}$ que representa a velocidade)
+
+O integral de $d\mathcal{V}$ dá nos o \textbf{caudal} (fluxo de volume):
+\begin{equation*}
+    Q = \frac{d\mathcal{V}}{dt} = \int_S \vec{V}\cdot\hat{n}\,dA
+\end{equation*}
+
+Para obter o \textbf{fluxo de massa}, multiplica-se o fluxo de volume pela densidade:
+\begin{equation} \label{eq:mass-flow-rate}
+    \dot{m} = \frac{dm}{dt} = \int_S \rho\vec{V}\cdot\hat{n}\,dA
+\end{equation}
+Se a densididade e a velocidade forem uniformes na superfície, então obtém se a aproximação unidimensional:
+\collectequation{DF-formulas}
+    {Caudal e fluxo de massa}
+    {Aprox. para entradas e saídas unidimensionais}{
+        \dot{m} = \rho Q =\rho V A
+}
+
+Por convenção define-se $\hat{n}$ como o vetor normal que aponta para fora. Assim sendo, $Q$ e $\dot{m}$ indicam fluxo para fora quando são positivos, e para dentro quando são negativos.
+
+As unidades de $Q$ são \unit{\meter\cubed\per\second} e de $\dot{m}$ são \unit{\kilogram\per\second}

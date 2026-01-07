@@ -1,0 +1,83 @@
+\section{Equação do momento linear (pag. 152)}
+
+\warnbox{AVISO: Notação}{
+    Na próxima equação, é usada a notação $\vec{p}$ para o momento linear, que não deve ser confundida com a notação usada nos restantes capítulos onde $p$ (normalmente representada sem vetor) que representa a pressão.
+}
+
+Usando a 3ª lei de Newton: $\mathwarn{\vec{F}_R = \dot{\vec{p}}}$ e aplicando o teorema do transporte de Reynolds ao momento linear $\mathwarn{\vec{p} = m\vec{V}}$, onde o valor especifico é a velocidade ($\beta = d\vec{p}/dm = \vec{V}$), obtém-se a seguinte relação para o momento linear:
+\begin{equation*}
+    \sum \vec{F} = \frac{d\vec{p}_{Sist}}{dt} = \int_{CV}\frac{\partial(\rho\vec{V})}{\partial t}\,d\mathcal{V} + \int_{CS}\rho\vec{V}(\vec{V}\cdot\hat{n})\,dA
+\end{equation*}
+sendo esta válida para um volume de controlo fixo, com a velocidade observada num referencial inercial.
+
+Para um sistema com entradas e saídas unidimensionais, presente na maioria dos exercícios, usa se a versão simplificada:
+\collectequation{DF-formulas}
+    {Equação do momento linear}{
+        Escoamento estável e incompressível, entradas e saídas unidimensionais.
+    }{
+        \sum \vec{F} = \int_{CV}\cancelto{0}{\frac{\partial\vec{V}}{\partial t}}\rho\,d\mathcal{V} + \left.\sum \vec{V}_i \dot{m}_i\right|_{out} - \left.\sum \vec{V}_i \dot{m}_i\right|_{in}
+}
+
+
+O termo $\sum \vec{F}$ representa a soma de todas as forças exercidas no fluído:
+\begin{itemize}
+    \item \textbf{Forças de superficie} \\
+        Forças que atuam na fronteira do volume de controlo, como:
+        \begin{itemize}
+            \item Forças de pressão
+            \item Forças viscosas (atrito)
+            \item Forças exercidas por corpos sólidos (ex. pistão), sendo estas uma pressão distribuída na superfície de contacto.
+        \end{itemize}
+    \item \textbf{Forças volúmicas} \\
+        Forças que atuam em todo o volume de controlo, como:
+        \begin{itemize}
+            \item Força da gravidade
+            \item Forças eletromagnéticas
+        \end{itemize}
+\end{itemize}
+
+\subsection{Força total da pressão (pag. 153)}
+As \textbf{forças de superficie} que atuam num volume de controlo são devidas \textbf{(1)} a forças \textbf{exercidas por corpos sólidos} que intersetam o volume de controlo (ex. pistão), e \textbf{(2)} a forças de \textbf{pressão} e \textbf{viscosidade} exercidas pelo \textbf{fluido envolvente} (quando a superficie de controlo interseta o fluido).
+
+A força total da pressão é dada por:
+\begin{equation} \label{eq:pressure-forces-abs}
+    \vec{F}_{press} = \int_{CS}p(-\hat{n})\,dA
+\end{equation}
+Se a pressão for uniforme, $p=p_a$ em toda a superficie de controlo, então a força total de pressão é nula.
+\begin{equation*}
+    \vec{F}_{press} = -p_a\int_{CS}\hat{n}\,dA\ \tcboxmath[left=2pt, right=2pt]{= 0}
+\end{equation*}
+
+\errorbox{ATENÇÃO: vetor normal e sinais}{
+    A convenção para o vetor normal $\hat{n}$ é que este aponta para fora do volume de controlo.
+    
+    A força de \textbf{pressão atua de fora para dentro} do volume de controlo, ou seja, no sentido oposto ao vetor normal, daí o sinal negativo. Este pode ser colocado no vetor normal, como em \eqref{eq:pressure-forces-abs} ou fora do integral, como em \eqref{eq:pressure-forces-gage}.
+}
+
+Muitos problemas podem ser simplificados se a pressão uniforme, $p_a$ for subtraída de todas as pressões envolvidas, sendo assim considerada, por definição desta a \textbf{pressão manométrica}. A equação da força total da pressão pode então ser escrita como:
+\begin{equation} \label{eq:pressure-forces-gage}
+    \vec{F}_{press} = -\int_{CS}(p-p_a)\hat{n}\,dA = -\int_{CS}p_{gauge}\hat{n}\,dA
+\end{equation}
+Um exemplo de pressão uniforme, $p_a$ é a pressão atmosférica, que atua em todas as superfícies expostas ao ar.
+
+Para um volume de controlo com entradas e saídas unidimensionais, a força total da pressão pode ser escrita como:
+\collectequation{DF-formulas}
+    {Força total da pressão}
+    {Entradas e saídas unidimensionais}{
+        F_{x\ press} = \sum p_{i} A_i (\hat{n}\cdot\vec{e}_x)
+}
+
+\warnbox{ATENÇÃO: Sinais}{
+    O sinal positivo ou negativo depende da orientação do vetor normal e da direção positiva do eixo.
+
+    \begin{equation*}
+        (\hat{n}\cdot\vec{e}_x) = \begin{cases}
+            +1 & \text{$\hat{n}$ no sentido do eixo} \\
+            -1 & \text{$\hat{n}$ no sentido oposto ao eixo} \\
+            0 & \text{$\hat{n}$ perpendicular ao eixo} \\
+            \cos{\theta} & \text{caso geral}
+        \end{cases}
+    \end{equation*}
+
+    A \textbf{pressão} atua sempre no sentido \textbf{de fora para dentro} do volume de controlo.
+}

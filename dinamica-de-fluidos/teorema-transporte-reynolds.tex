@@ -1,0 +1,31 @@
+\section{Teorema do transporte de Reynolds  (pag. 139)}
+Seja $B$ uma propriedade qualquer do fluido e $\beta = \frac{dB}{dm}$ o seu valor específico, a quantidade total de $B$ no volume de controlo é dada por:
+\begin{equation*}
+    B_{CV} = \int_{CV}\beta\,dm = \int_{CV}\beta\rho\,d\mathcal{V}
+\end{equation*}
+
+Interessa-nos saber a taxa de variação temporal da propriedade $B$, e esta é dada pelo \textbf{Teorema do transporte de Reynolds}:
+\collectequation{DF-formulas}
+    {Teorema do transporte de Reynolds}
+    {Forma integral}{
+        \frac{dB_{Sist}}{dt} = \frac{d}{dt}\left( \int_{CV}\beta\rho\,d\mathcal{V} \right) + \int_{CS}\beta\rho(\vec{V}\cdot\hat{n})\,dA
+}
+onde $\vec{V}$ é a \textbf{velocidade relativa} do fluido relativamente superfície do volume de controlo. CV é o volume de controlo e CS é a superfície de controlo.
+
+Se o volume for fixo a derivada temporal passa para dentro do integral, obtendo-se:
+\begin{equation*}
+    \frac{dB_{Sist}}{dt} = \int_{CV}\frac{\partial}{\partial t}(\beta\rho)\,d\mathcal{V} + \int_{CS}\beta\rho(\vec{V}\cdot\hat{n})\,dA
+\end{equation*}
+
+Em muitos casos o volume é fixo, e tem um número definido de entradas e saidas unidimensionais - a velocidade é perpendicular a cada secção e as propriedades são uniformes em cada secção. Nestes casos, o teorema de transporte de Reynolds pode escrever-se como:
+
+\collectequation{DF-formulas}
+    {Transporte Reynolds}
+    {Volume de controlo constante, entradas e saidas unidimensionais}{
+        \frac{dB_{Sist}}{dt} = \int_{CV}\frac{\partial}{\partial t}(\beta\rho)\,d\mathcal{V} + \left.\sum\beta_i \dot{m}_i\right|_{out} - \left.\sum\beta_i \dot{m}_i\right|_{in}
+}
+
+onde $\dot{m}_i = \rho_iA_iV_i$, obtendo-se assim:
+\begin{equation*}
+    \frac{dB_{Sist}}{dt} = \int_{CV}\frac{\partial}{\partial t}(\beta\rho)\,d\mathcal{V} + \sum(\rho_i\beta_iV_iA_i)_{out} - \sum(\rho_i\beta_iV_iA_i)_{in}
+\end{equation*}

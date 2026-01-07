@@ -1,0 +1,42 @@
+\section{Equação de Bernoulli (pag. 168)}
+Uma relação clássica e usada extensívamente que deriva da análise do momento linear é a \textbf{equação de Bernoulli}. Esta é aplicável para escoamentos não viscosos, sem atrito, logo deve ser aplicada apenas a regiões do escoamento onde a fricção é praticamente nula.
+
+Considera-se um volume de controlo definido por um elemento $ds$ de um tubo de corrente com secção $A(s)$ onde $s$ é a coordenada ao longo de uma linha de corrente. As propriedades ($\rho$, $p$, $V$) são constantes em cada secção, mas variam com $s$.
+
+Aplica-se a conservação da massa (transporte de Reynolds), obtendo, na forma diferencial:
+\begin{equation*}
+    \frac{d\rho}{dt}d\mathcal{V} + d\dot{m} = 0
+\end{equation*}
+que se rearanja para obter a forma que pretendemos:
+\begin{equation*}
+    d\dot{m} = -\frac{\partial\rho}{\partial t}A\,ds
+\end{equation*}
+
+Escrevendo o diferencial do momento linear (transporte de Reynolds), na direção da corrente:
+\begin{equation} \label{eq:bernoulli-lin-momen}
+    \sum dF_s = \frac{\partial}{\partial t}\left(\rho V_s\right) A\,ds + d(\dot{m}V_s)
+\end{equation}
+sendo $\sum F_s$ e $V_s$ o somatório das forças, e a velocidade, ambos na direção de $s$. $V_s = V$ pois $s$ tem a direção da corrente.
+
+Se o escoamento for não viscoso (= atrito desprezado), as únicas forças que atuam no corpo são:
+\begin{itemize}
+    \item \textbf{Força da gravidade}:
+        \begin{equation*}
+            dF_{s,\text{grav}} = -\rho g A\,dz
+        \end{equation*}
+    \item \textbf{Força da pressão}:
+        \begin{equation*}
+            dF_{s,\text{press}} = -A\,dp
+        \end{equation*}
+\end{itemize}
+
+Substituindo estas forças na equação do momento linear \eqref{eq:bernoulli-lin-momen} e simplificando, obtemos a \textbf{Equação de Bernoulli} para escoamento não estável, não viscoso, ao longo de uma linha de corrente:
+\begin{equation*}
+    \frac{\partial V}{\partial t}ds + \frac{dp}{\rho} + V\,dV + g\,dz = 0
+\end{equation*}
+esta equação está na forma diferencial, e pode ser integrada entre quaisquer 2 pontos na linha de corrente.
+
+Como consideramos apenas escoamentos estáveis ($\frac{\partial V}{\partial t} = 0$) e incompressíveis ($\rho = \text{const}$), a equação reduz-se para: 
+\collectequation{DF-formulas}{Equação de Bernoulli}{Escoamento estável, incompressível, não viscoso, ao longo de uma linha de corrente}{
+    \frac{p_1}{\rho} + \frac{1}{2}V_1^2 + gz_1 = \frac{p_2}{\rho} + \frac{1}{2}V_2^2 + gz_2 = \text{const}
+}
