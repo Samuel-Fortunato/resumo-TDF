@@ -1,6 +1,4 @@
-\section{Relações integrais para um volume de controlo}
-
-\subsection{Caudal e fluxo de massa (pag. 138)}
+\section{Caudal e fluxo de massa (pag. 138)}
 Qual o volume de fluido que atravessa uma superficie $S$ por unidade de tempo? Como $\vec{V}$ varia com a posição, devemos integrar em ordem a $dA$, e ter em conta que a velocidade pode fazer um ângulo $\theta$ com a normal à superficie. Assim sendo, o volume que atravessa a superfície é dado por:
 \begin{equation*}
     d\mathcal{V} = V\,dt\,dA\cos{\theta} = (\vec{V}\cdot\hat{n})\,dA\,dt
@@ -29,7 +27,7 @@ As unidades de $Q$ são \unit{\meter\cubed\per\second} e de $\dot{m}$ são \unit
 
 
 
-\subsection{Teorema do transporte de Reynolds  (pag. 139)}
+\section{Teorema do transporte de Reynolds  (pag. 139)}
 Seja $B$ uma propriedade qualquer do fluido e $\beta = \frac{dB}{dm}$ o seu valor específico, a quantidade total de $B$ no volume de controlo é dada por:
 \begin{equation*}
     B_{CV} = \int_{CV}\beta\,dm = \int_{CV}\beta\rho\,d\mathcal{V}
@@ -52,7 +50,7 @@ Em muitos casos o volume é fixo, e tem um número definido de entradas e saidas
 
 \collectequation{DF-formulas}
     {Transporte Reynolds}
-    {Volume constante, entradas e saidas unidimensionais}{
+    {Volume de controlo constante, entradas e saidas unidimensionais}{
         \frac{dB_{Sist}}{dt} = \int_{CV}\frac{\partial}{\partial t}(\beta\rho)\,d\mathcal{V} + \left.\sum\beta_i \dot{m}_i\right|_{out} - \left.\sum\beta_i \dot{m}_i\right|_{in}
 }
 
@@ -63,7 +61,7 @@ onde $\dot{m}_i = \rho_iA_iV_i$, obtendo-se assim:
 
 
 
-\subsection{Equação da conservação da massa (pag. 147)}
+\section{Equação da conservação da massa (pag. 147)}
 Até agora usamos $B$ para uma qualquer propriedade do sistema, e $\beta$ para o valor especifico (por unidade de massa) da propriedade.
 
 Aplicando agora o teorema do transporte de Reynolds à massa $m$, onde a massa específica $\frac{dm}{dm} = 1$ obtém-se a \textbf{equação da conservação da massa}, com volume fixo:
@@ -72,7 +70,7 @@ Aplicando agora o teorema do transporte de Reynolds à massa $m$, onde a massa e
     \frac{dm_{Sist}}{dt} = 0 = \int_{CV}\frac{\partial\rho}{\partial t}\,d\mathcal{V} + \int_{CS}\rho(\vec{V}\cdot\hat{n})\,dA
 \end{equation*}
 
-No caso especifico de fluxo estável, a equação da conservação da massa reduz-se a:
+No caso especifico de escoamento estável, a equação da conservação da massa reduz-se a:
 \begin{equation*}
     \int_{CS}\rho(\vec{V}\cdot\hat{n})\,dA = 0
 \end{equation*}
@@ -83,7 +81,7 @@ que, para um sistema com entradas e saídas unidimensionais, pode escrever-se co
 
 
 
-\subsection{Equação do momento linear (pag. 152)}
+\section{Equação do momento linear (pag. 152)}
 
 \warnbox{AVISO: Notação}{
     Na próxima equação, é usada a notação $\vec{p}$ para o momento linear, que não deve ser confundida com a notação usada nos restantes capítulos onde $p$ (normalmente representada sem vetor) que representa a pressão.
@@ -98,7 +96,7 @@ sendo esta válida para um volume de controlo fixo, com a velocidade observada n
 Para um sistema com entradas e saídas unidimensionais, presente na maioria dos exercícios, usa se a versão simplificada:
 \collectequation{DF-formulas}
     {Equação do momento linear}{
-        Fluxo estável ($\vec{V}=\text{cte}$) e incompressível ($\rho=\text{cte}$), entradas e saídas unidimensionais.
+        Escoamento estável e incompressível, entradas e saídas unidimensionais.
     }{
         \sum \vec{F} = \int_{CV}\cancelto{0}{\frac{\partial\vec{V}}{\partial t}}\rho\,d\mathcal{V} + \left.\sum \vec{V}_i \dot{m}_i\right|_{out} - \left.\sum \vec{V}_i \dot{m}_i\right|_{in}
 }
@@ -121,7 +119,7 @@ O termo $\sum \vec{F}$ representa a soma de todas as forças exercidas no fluíd
         \end{itemize}
 \end{itemize}
 
-\subsubsection{Força total da pressão}
+\subsection{Força total da pressão (pag. 153)}
 As \textbf{forças de superficie} que atuam num volume de controlo são devidas \textbf{(1)} a forças \textbf{exercidas por corpos sólidos} que intersetam o volume de controlo (ex. pistão), e \textbf{(2)} a forças de \textbf{pressão} e \textbf{viscosidade} exercidas pelo \textbf{fluido envolvente} (quando a superficie de controlo interseta o fluido).
 
 A força total da pressão é dada por:
@@ -169,9 +167,49 @@ Para um volume de controlo com entradas e saídas unidimensionais, a força tota
 
 
 
-\subsection{Equação de Bernoulli (pag. 168)}
+\section{Equação de Bernoulli (pag. 168)}
+Uma relação clássica e usada extensívamente que deriva da análise do momento linear é a \textbf{equação de Bernoulli}. Esta é aplicável para escoamentos não viscosos, sem atrito, logo deve ser aplicada apenas a regiões do escoamento onde a fricção é praticamente nula.
+
+Considera-se um volume de controlo definido por um elemento $ds$ de um tubo de corrente com secção $A(s)$ onde $s$ é a coordenada ao longo de uma linha de corrente. As propriedades ($\rho$, $p$, $V$) são constantes em cada secção, mas variam com $s$.
+
+Aplica-se a conservação da massa (transporte de Reynolds), obtendo, na forma diferencial:
 \begin{equation*}
-    \boxed{
-        \frac{p_1}{\rho} + \frac{1}{2}V_1^2 + gz_1 = \frac{p_2}{\rho} + \frac{1}{2}V_2^2 + gz_2 = \text{const}
-    }
+    \frac{d\rho}{dt}d\mathcal{V} + d\dot{m} = 0
 \end{equation*}
+que se rearanja para obter a forma que pretendemos:
+\begin{equation*}
+    d\dot{m} = -\frac{\partial\rho}{\partial t}A\,ds
+\end{equation*}
+
+Escrevendo o diferencial do momento linear (transporte de Reynolds), na direção da corrente:
+\begin{equation} \label{eq:bernoulli-lin-momen}
+    \sum dF_s = \frac{\partial}{\partial t}\left(\rho V_s\right) A\,ds + d(\dot{m}V_s)
+\end{equation}
+sendo $\sum F_s$ e $V_s$ o somatório das forças, e a velocidade, ambos na direção de $s$. $V_s = V$ pois $s$ tem a direção da corrente.
+
+Se o escoamento for não viscoso (= atrito desprezado), as únicas forças que atuam no corpo são:
+\begin{itemize}
+    \item \textbf{Força da gravidade}:
+        \begin{equation*}
+            dF_{s,\text{grav}} = -\rho g A\,dz
+        \end{equation*}
+    \item \textbf{Força da pressão}:
+        \begin{equation*}
+            dF_{s,\text{press}} = -A\,dp
+        \end{equation*}
+\end{itemize}
+
+Substituindo estas forças na equação do momento linear \eqref{eq:bernoulli-lin-momen} e simplificando, obtemos a \textbf{Equação de Bernoulli} para escoamento não estável, não viscoso, ao longo de uma linha de corrente:
+\begin{equation*}
+    \frac{\partial V}{\partial t}ds + \frac{dp}{\rho} + V\,dV + g\,dz = 0
+\end{equation*}
+esta equação está na forma diferencial, e pode ser integrada entre quaisquer 2 pontos na linha de corrente.
+
+Como consideramos apenas escoamentos estáveis ($\frac{\partial V}{\partial t} = 0$) e incompressíveis ($\rho = \text{const}$), a equação reduz-se para: 
+\collectequation{DF-formulas}{Equação de Bernoulli}{Escoamento estável, incompressível, não viscoso, ao longo de uma linha de corrente}{
+    \frac{p_1}{\rho} + \frac{1}{2}V_1^2 + gz_1 = \frac{p_2}{\rho} + \frac{1}{2}V_2^2 + gz_2 = \text{const}
+}
+
+
+
+\section{Equação da energia (pag. 184)}

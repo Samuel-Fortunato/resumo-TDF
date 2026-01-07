@@ -8,12 +8,12 @@
 \begin {equation*} \boxed {  \frac {dB_{Sist}}{dt} = \frac {d}{dt}\left ( \int _{CV}\beta \rho \,d\mathcal {V} \right ) + \int _{CS}\beta \rho (\vec {V}\cdot \hat {n})\,dA  } \end {equation*}
 
 
- \noindent \textbf {Transporte Reynolds} \\ \indent Volume constante, entradas e saidas unidimensionais 
+ \noindent \textbf {Transporte Reynolds} \\ \indent Volume de controlo constante, entradas e saidas unidimensionais 
 
 \begin {equation*} \boxed {  \frac {dB_{Sist}}{dt} = \int _{CV}\frac {\partial }{\partial t}(\beta \rho )\,d\mathcal {V} + \left .\sum \beta _i \dot {m}_i\right |_{out} - \left .\sum \beta _i \dot {m}_i\right |_{in}  } \end {equation*}
 
 
- \noindent \textbf {Equação do momento linear} \\ \indent  Fluxo estável ($\vec {V}=\text {cte}$) e incompressível ($\rho =\text {cte}$), entradas e saídas unidimensionais.  
+ \noindent \textbf {Equação do momento linear} \\ \indent  Escoamento estável e incompressível, entradas e saídas unidimensionais.  
 
 \begin {equation*} \boxed {  \sum \vec {F} = \int _{CV}\cancelto {0}{\frac {\partial \vec {V}}{\partial t}}\rho \,d\mathcal {V} + \left .\sum \vec {V}_i \dot {m}_i\right |_{out} - \left .\sum \vec {V}_i \dot {m}_i\right |_{in}  } \end {equation*}
 
@@ -21,5 +21,10 @@
  \noindent \textbf {Força total da pressão} \\ \indent Entradas e saídas unidimensionais 
 
 \begin {equation*} \boxed {  F_{x\ press} = \sum p_{i} A_i (\hat {n}\cdot \vec {e}_x)  } \end {equation*}
+
+
+ \noindent \textbf {Equação de Bernoulli} \\ \indent Escoamento estável, incompressível, não viscoso, ao longo de uma linha de corrente 
+
+\begin {equation*} \boxed {  \frac {p_1}{\rho } + \frac {1}{2}V_1^2 + gz_1 = \frac {p_2}{\rho } + \frac {1}{2}V_2^2 + gz_2 = \text {const}  } \end {equation*}
 
 
