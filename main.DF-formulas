@@ -40,7 +40,7 @@
 
  \noindent \textbf {Derivada Material} \\ \indent  Derivada de uma propriedade de uma partícula de matéria que se move com velocidade $\vec {v}$  
 
-\begin {equation*} \boxed {  \frac {D}{Dt} = \frac {\partial }{\partial t} + \left (\vec {v}(\vec {r},t)\cdot \vec {\nabla }\right )  } \end {equation*}
+\begin {equation*} \boxed {  \frac {D}{Dt} = \frac {\partial }{\partial t} + \left (\vec {v}(\vec {r},t)\cdot \vec {\nabla }\right ) = \frac {\partial }{\partial t} + \left (v_x\frac {\partial }{\partial x} + v_y\frac {\partial }{\partial y} + v_z\frac {\partial }{\partial z}\right )  } \end {equation*}
 
 
  \noindent \textbf {Equação da continuidade} \\ \indent Conservação da massa 
