@@ -16,7 +16,7 @@ O termo do Calor, $\dot{Q}$ pode ser decomposto em várias componentes: conduç�
 
 Já o termo do trabalho pode ser decomposto em 3 parcelas:
 \begin{equation} \label{eq:trabalho-eixo-press-visc}
-    \dot{W} = \dot{W}_{eixo} + \dot{W}_{pressao} + \dot{W}_{tensao\ de\ viscosidade} = \dot{W}_{s} + \dot{W}_{p} + \dot{W}_{\tau}
+    \dot{W} = \dot{W}_{eixo} + \dot{W}_{pressao} + \dot{W}_{tensao\ de\ viscosidade} = \dot{W}_{s} + \dot{W}_{p} + \dot{W}_{\nu}
 \end{equation}
 O trabalho de forças gravíticas não é incluido, pois já é contabilizado na primeira lei da Termodinâmica como energia potencial.
 
@@ -39,12 +39,17 @@ Calculando este termo:
     \item numa \textbf{superficie sólida} \textit{(no splipping condition)}
         \subitem $\vec{V} = \vec{0}$ então $\dot{W}_{\nu} = 0$
     \item numa \textbf{entrada ou saída} do volume de controlo
-        \subitem $d\dot{W}_{\nu} = -\tau_{nn} V_n\,dA \approx 0$
+        \subitem $\dot{W}_{\nu} = -\int_{CS}\tau_{nn} V_n\,dA \approx 0$
         \subitem onde $\tau_{nn}$ é a componente normal da tensão que é normalmente muito pequena.
     \item numa \textbf{superficie $ss$ de um fluido} externo ao sistema
-        \subitem $d\dot{W}_{\nu} = -\tau_n V_n\,dA \neq 0$
+        \subitem $\dot{W}_{\nu} = -\int_{ss}\vec{\tau}\cdot\vec{V}\,dA \neq 0$
         \subitem sendo esta a única componente \textbf{não desprezada}.
 \end{itemize}
+
+Assim, a expressão para o trabalho das forças viscosas é:
+\begin{equation*}
+    \dot{W}_{\nu} = \dot{W}_{ss}
+\end{equation*}
 
 Substituindo esta equação na primeira lei da Termodinâmica, e simplificando, obtemos a seguinte relação:
 \begin{equation*}
