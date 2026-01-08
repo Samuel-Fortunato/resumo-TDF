@@ -20,7 +20,7 @@
 
  \noindent \textbf {Força total da pressão} \\ \indent Entradas e saídas unidimensionais 
 
-\begin {equation*} \boxed {  F_{x\ press} = \sum p_{i} A_i (\hat {n}\cdot \vec {e}_x)  } \end {equation*}
+\begin {equation*} \boxed {  F_{\text {x press}} = \sum p_{i} A_i (-\hat {n}\cdot \vec {e}_x)  } \end {equation*}
 
 
  \noindent \textbf {Equação de Bernoulli} \\ \indent Escoamento estável, incompressível, não viscoso, ao longo de uma linha de corrente 

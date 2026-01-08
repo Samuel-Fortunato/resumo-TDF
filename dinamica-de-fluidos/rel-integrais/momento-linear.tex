@@ -64,18 +64,18 @@ Para um volume de controlo com entradas e saídas unidimensionais, a força tota
 \collectequation{DF-formulas}
     {Força total da pressão}
     {Entradas e saídas unidimensionais}{
-        F_{x\ press} = \sum p_{i} A_i (\hat{n}\cdot\vec{e}_x)
+        F_{\text{x press}} = \sum p_{i} A_i (-\hat{n}\cdot\vec{e}_x)
 }
 
 \warnbox{ATENÇÃO: Sinais}{
     O sinal positivo ou negativo depende da orientação do vetor normal e da direção positiva do eixo.
 
     \begin{equation*}
-        (\hat{n}\cdot\vec{e}_x) = \begin{cases}
-            +1 & \text{$\hat{n}$ no sentido do eixo} \\
-            -1 & \text{$\hat{n}$ no sentido oposto ao eixo} \\
+        (-\hat{n}\cdot\vec{e}_x) = \begin{cases}
+            -1 & \text{$\hat{n}$ no sentido do eixo} \\
+            1 & \text{$\hat{n}$ no sentido oposto ao eixo} \\
             0 & \text{$\hat{n}$ perpendicular ao eixo} \\
-            \cos{\theta} & \text{caso geral}
+            -\cos{\theta} & \text{caso geral}
         \end{cases}
     \end{equation*}
 
