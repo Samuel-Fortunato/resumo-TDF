@@ -6,10 +6,10 @@ A equação para o momento linear é dada por:
 
 As forças que atuam na partícula são as forças volúmicas (apenas consideraremos a gravidade) e as forças de contacto. Estas últimas são devidas às tensões na superficie do volume de controlo (infinitesimal), que são a soma da pressão hidrostática, $p$ com as tensões viscosas $\tau_{ij}$.
 
-Substituindo as forças na equação do momento linear obtemos:
-\begin{equation*}
+Substituindo as forças na equação do momento linear obtemos a seguinte equação, na forma vetorial:
+\collectequation{DF-formulas}{Equação do momento linear}{Forma vetorial}{
     \rho\frac{D\vec{V}}{Dt} = \rho\vec{g} - \vec{\nabla}p + \vec{\nabla}\cdot\overline{\overline{\tau}}
-\end{equation*}
+}
 onde
 \begin{equation*}
     \overline{\overline{\tau}} = \begin{bmatrix}
@@ -21,6 +21,45 @@ onde
 
 Esta equação está escrita de uma forma extremamente compacta, mas se for escrita por extenso, para cada componente, toma a forma:
 
-\collectequation{DF-formulas}{Equação de Navier-Stokes para a componente $x$}{Equivalente para as componentes $y$ e $z$}{
-    \rho\left(\frac{\partial u}{\partial t} + u\,\frac{\partial u}{\partial x} + v\,\frac{\partial u}{\partial y} + w\,\frac{\partial u}{\partial z}\right) = \rho g_x - \frac{\partial p}{\partial x} + \frac{\partial \tau_{xx}}{\partial x} + \frac{\partial \tau_{yx}}{\partial y} + \frac{\partial \tau_{zx}}{\partial z}
+\collectequation{DF-formulas}{Equação do momento linear para a componente $x$}{Equivalente para as componentes $y$ e $z$}{
+    \rho\frac{Du}{Dt} = \rho g_x - \frac{\partial p}{\partial x} + \frac{\partial \tau_{xx}}{\partial x} + \frac{\partial \tau_{yx}}{\partial y} + \frac{\partial \tau_{zx}}{\partial z}
+}
+
+
+
+\subsubsection{Fluidos não viscosos - Equação de Euler}
+Caso a viscosidade seja desprezável (fluidos ideiais) assumimos que $\overline{\overline{\tau}} = 0$, a equação do momento linear reduz-se a:
+\begin{equation*}
+    \rho\frac{D\vec{V}}{Dt} = \rho\vec{g} - \vec{\nabla}p
+\end{equation*}
+
+
+
+\subsubsection{Fluidos Newtonianos}
+Para \textbf{fluidos newtonianos} as tensões viscosas são proporcionais à velocidade e ao coeficiente de viscosidade. Para escoamento incompressível tem-se que:
+\begin{gather*}
+    \tau_{xx} = 2\mu \frac{\partial u}{\partial x}, \qquad
+    \tau_{yy} = 2\mu \frac{\partial v}{\partial y}, \qquad
+    \tau_{zz} = 2\mu \frac{\partial w}{\partial z} \\[1em]
+    \tau_{xy} = \tau_{yx} = \mu \left( \frac{\partial u}{\partial y}
+    + \frac{\partial v}{\partial x} \right) \\
+    \tau_{xz} = \tau_{zx} = \mu \left( \frac{\partial w}{\partial x}
+    + \frac{\partial u}{\partial z} \right) \\
+    \tau_{yz} = \tau_{zy} = \mu \left( \frac{\partial v}{\partial z}
+    + \frac{\partial w}{\partial y} \right)
+\end{gather*}
+onde $\mu$ é o coeficiente de viscosidade.
+
+Substituindo na equação do momento linear obtém-se as \textbf{equações de Navier-Stokes}, expressas na forma vetorial:
+\collectequation{DF-formulas}{Equação de Navier-Stokes}{
+    Escoamento incompressível, fluido Newtoniano, forma vetorial
+}{
+    \rho\frac{D\vec{V}}{Dt} = \rho\vec{g} - \vec{\nabla}p + \mu\vec{\nabla}^2\vec{V}
+}
+
+Ou expressas forma extensa, para a componente em $x$:
+\collectequation{DF-formulas}{Equação de Navier-Stokes}{
+    Mesmas condições que o anterior, componente em x
+}{
+    \rho\frac{Du}{Dt} = \rho g_x - \frac{\partial p}{\partial x} + \mu\left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right)
 }

@@ -58,8 +58,23 @@
 \begin {equation*} \boxed {  \nabla \cdot \vec {V} = 0  } \end {equation*}
 
 
- \noindent \textbf {Equação de Navier-Stokes para a componente $x$} \\ \indent Equivalente para as componentes $y$ e $z$ 
+ \noindent \textbf {Equação do momento linear} \\ \indent Forma vetorial 
 
-\begin {equation*} \boxed {  \rho \left (\frac {\partial u}{\partial t} + u\,\frac {\partial u}{\partial x} + v\,\frac {\partial u}{\partial y} + w\,\frac {\partial u}{\partial z}\right ) = \rho g_x - \frac {\partial p}{\partial x} + \frac {\partial \tau _{xx}}{\partial x} + \frac {\partial \tau _{yx}}{\partial y} + \frac {\partial \tau _{zx}}{\partial z}  } \end {equation*}
+\begin {equation*} \boxed {  \rho \frac {D\vec {V}}{Dt} = \rho \vec {g} - \vec {\nabla }p + \vec {\nabla }\cdot \overline {\overline {\tau }}  } \end {equation*}
+
+
+ \noindent \textbf {Equação do momento linear para a componente $x$} \\ \indent Equivalente para as componentes $y$ e $z$ 
+
+\begin {equation*} \boxed {  \rho \frac {Du}{Dt} = \rho g_x - \frac {\partial p}{\partial x} + \frac {\partial \tau _{xx}}{\partial x} + \frac {\partial \tau _{yx}}{\partial y} + \frac {\partial \tau _{zx}}{\partial z}  } \end {equation*}
+
+
+ \noindent \textbf {Equação de Navier-Stokes} \\ \indent  Escoamento incompressível, fluido Newtoniano, forma vetorial  
+
+\begin {equation*} \boxed {  \rho \frac {D\vec {V}}{Dt} = \rho \vec {g} - \vec {\nabla }p + \mu \vec {\nabla }^2\vec {V}  } \end {equation*}
+
+
+ \noindent \textbf {Equação de Navier-Stokes} \\ \indent  Mesmas condições que o anterior, componente em x  
+
+\begin {equation*} \boxed {  \rho \frac {Du}{Dt} = \rho g_x - \frac {\partial p}{\partial x} + \mu \left (\frac {\partial ^2 u}{\partial x^2} + \frac {\partial ^2 u}{\partial y^2} + \frac {\partial ^2 u}{\partial z^2}\right )  } \end {equation*}
 
 
