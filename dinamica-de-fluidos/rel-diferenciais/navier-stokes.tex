@@ -22,7 +22,7 @@ onde
 Esta equação está escrita de uma forma extremamente compacta, mas se for escrita por extenso, para cada componente, toma a forma:
 
 \collectequation{DF-formulas}{Equação do momento linear para a componente $x$}{Equivalente para as componentes $y$ e $z$}{
-    \rho\frac{Du}{Dt} = \rho g_x - \frac{\partial p}{\partial x} + \frac{\partial \tau_{xx}}{\partial x} + \frac{\partial \tau_{yx}}{\partial y} + \frac{\partial \tau_{zx}}{\partial z}
+    \rho\left(\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y} + w\frac{\partial u}{\partial z}\right) = \rho g_x - \frac{\partial p}{\partial x} + \frac{\partial \tau_{xx}}{\partial x} + \frac{\partial \tau_{yx}}{\partial y} + \frac{\partial \tau_{zx}}{\partial z}
 }
 
 
@@ -61,5 +61,5 @@ Ou expressas forma extensa, para a componente em $x$:
 \collectequation{DF-formulas}{Equação de Navier-Stokes}{
     Mesmas condições que o anterior, componente em x
 }{
-    \rho\frac{Du}{Dt} = \rho g_x - \frac{\partial p}{\partial x} + \mu\left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right)
+    \rho\left(\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y} + w\frac{\partial u}{\partial z}\right) = \rho g_x - \frac{\partial p}{\partial x} + \mu\left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right)
 }

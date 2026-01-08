@@ -40,7 +40,7 @@
 
  \noindent \textbf {Derivada Material} \\ \indent  Derivada de uma propriedade de uma partícula de matéria que se move com velocidade $\vec {v}$  
 
-\begin {equation*} \boxed {  \frac {D}{Dt} = \frac {\partial }{\partial t} + \left (\vec {v}(\vec {r},t)\cdot \vec {\nabla }\right ) = \frac {\partial }{\partial t} + \left (v_x\frac {\partial }{\partial x} + v_y\frac {\partial }{\partial y} + v_z\frac {\partial }{\partial z}\right )  } \end {equation*}
+\begin {equation*} \boxed {  \frac {D}{Dt} = \frac {\partial }{\partial t} + \left (\vec {v}(\vec {r},t)\cdot \vec {\nabla }\right ) = \frac {\partial }{\partial t} + \left (u\frac {\partial }{\partial x} + v\frac {\partial }{\partial y} + w\frac {\partial }{\partial z}\right )  } \end {equation*}
 
 
  \noindent \textbf {Equação da continuidade} \\ \indent Conservação da massa 
@@ -65,7 +65,7 @@
 
  \noindent \textbf {Equação do momento linear para a componente $x$} \\ \indent Equivalente para as componentes $y$ e $z$ 
 
-\begin {equation*} \boxed {  \rho \frac {Du}{Dt} = \rho g_x - \frac {\partial p}{\partial x} + \frac {\partial \tau _{xx}}{\partial x} + \frac {\partial \tau _{yx}}{\partial y} + \frac {\partial \tau _{zx}}{\partial z}  } \end {equation*}
+\begin {equation*} \boxed {  \rho \left (\frac {\partial u}{\partial t} + u\frac {\partial u}{\partial x} + v\frac {\partial u}{\partial y} + w\frac {\partial u}{\partial z}\right ) = \rho g_x - \frac {\partial p}{\partial x} + \frac {\partial \tau _{xx}}{\partial x} + \frac {\partial \tau _{yx}}{\partial y} + \frac {\partial \tau _{zx}}{\partial z}  } \end {equation*}
 
 
  \noindent \textbf {Equação de Navier-Stokes} \\ \indent  Escoamento incompressível, fluido Newtoniano, forma vetorial  
@@ -75,6 +75,6 @@
 
  \noindent \textbf {Equação de Navier-Stokes} \\ \indent  Mesmas condições que o anterior, componente em x  
 
-\begin {equation*} \boxed {  \rho \frac {Du}{Dt} = \rho g_x - \frac {\partial p}{\partial x} + \mu \left (\frac {\partial ^2 u}{\partial x^2} + \frac {\partial ^2 u}{\partial y^2} + \frac {\partial ^2 u}{\partial z^2}\right )  } \end {equation*}
+\begin {equation*} \boxed {  \rho \left (\frac {\partial u}{\partial t} + u\frac {\partial u}{\partial x} + v\frac {\partial u}{\partial y} + w\frac {\partial u}{\partial z}\right ) = \rho g_x - \frac {\partial p}{\partial x} + \mu \left (\frac {\partial ^2 u}{\partial x^2} + \frac {\partial ^2 u}{\partial y^2} + \frac {\partial ^2 u}{\partial z^2}\right )  } \end {equation*}
 
 
