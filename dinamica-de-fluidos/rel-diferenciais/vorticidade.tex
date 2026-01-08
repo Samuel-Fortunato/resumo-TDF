@@ -1,0 +1,26 @@
+\subsection{Vorticidade}
+A velocidade angular em torno do eixo $z$ (e igualmente para os outros eixos) é dada por:
+\begin{equation*}
+    \omega_z = \frac{1}{2}\left(\frac{\partial v}{\partial x} - \frac{\partial u}{\partial y}\right)
+\end{equation*}
+
+Para eliminar o fator de $1/2$ define-se a \textbf{vorticidade}:
+\collectequation{DF-formulas}{Vorticidade}{$\vec{\zeta} = 2 \vec{\omega}$}{
+    \vec{\zeta} = \vec{\nabla} \times \vec{V} =
+        \begin{vmatrix}
+            \hat{\imath} & \hat{\jmath} & \hat{k} \\
+            \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+            u & v & w 
+        \end{vmatrix}
+        = 2 \vec{\omega}
+}
+Quando $\vec{\zeta} = \vec{0}$ o escoamento diz se \textbf{irrotacional}.
+
+
+
+\subsection{Escoamento ideal e irrotacional}
+Já sabemos que para um escoamento ideal (viscosidade desprezável), é válida a equação de Euler \eqref{eq:euler-ideal-flow}. Se o escoamento for arrotacional, através da expansão da derivada material, podemos voltar a obter a equação de Bernoulli:
+\begin{equation*}
+    \frac{p}{\rho} + \frac{1}{2}V^2 + gz = \text{const}
+\end{equation*}
+Nesta equação, o valor da constante depende da linha de corrente. No caso expecifico de um escoamento \textbf{irrotacional}, a constante é a mesma em todo o volume de escoamento, independentemente da linha de corrente
