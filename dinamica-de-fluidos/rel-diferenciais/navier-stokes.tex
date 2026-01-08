@@ -1,0 +1,26 @@
+\subsection{Equações de Navier-stokes (Equação do momento linear)}
+A equação para o momento linear é dada por:
+\begin{equation*}
+    \sum\vec{F} = \rho \frac{D\vec{V}}{Dt}\,dx\,dy\,dz
+\end{equation*}
+
+As forças que atuam na partícula são as forças volúmicas (apenas consideraremos a gravidade) e as forças de contacto. Estas últimas são devidas às tensões na superficie do volume de controlo (infinitesimal), que são a soma da pressão hidrostática, $p$ com as tensões viscosas $\tau_{ij}$.
+
+Substituindo as forças na equação do momento linear obtemos:
+\begin{equation*}
+    \rho\frac{D\vec{V}}{Dt} = \rho\vec{g} - \vec{\nabla}p + \vec{\nabla}\cdot\overline{\overline{\tau}}
+\end{equation*}
+onde
+\begin{equation*}
+    \overline{\overline{\tau}} = \begin{bmatrix}
+        \tau_{xx} & \tau_{yx} & \tau_{zx} \\
+        \tau_{xy} & \tau_{yy} & \tau_{zy} \\
+        \tau_{xz} & \tau_{yz} & \tau_{zz} \\
+    \end{bmatrix}
+\end{equation*}
+
+Esta equação está escrita de uma forma extremamente compacta, mas se for escrita por extenso, para cada componente, toma a forma:
+
+\collectequation{DF-formulas}{Equação de Navier-Stokes para a componente $x$}{Equivalente para as componentes $y$ e $z$}{
+    \rho\left(\frac{\partial u}{\partial t} + u\,\frac{\partial u}{\partial x} + v\,\frac{\partial u}{\partial y} + w\,\frac{\partial u}{\partial z}\right) = \rho g_x - \frac{\partial p}{\partial x} + \frac{\partial \tau_{xx}}{\partial x} + \frac{\partial \tau_{yx}}{\partial y} + \frac{\partial \tau_{zx}}{\partial z}
+}

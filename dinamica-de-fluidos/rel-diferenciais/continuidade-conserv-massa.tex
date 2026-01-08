@@ -1,0 +1,16 @@
+\subsection{Equação da continuidade (conservação da massa)}
+A equação da conservação de massa, ou \textbf{equação da continuidade}, escrita em coordenadas cartesianas é a seguinte:
+\collectequation{DF-formulas}{Equação da continuidade}{Conservação da massa}{
+    \frac{\partial\rho}{\partial t} + \nabla\cdot(\rho\vec{V}) = 0
+}
+
+Esta equação pode ser convertida para \textbf{coordenadas polares cilindricas}, tomando a seguinte forma:
+\collectequation{DF-formulas}{Equação da continuidade}{Coordenadas cilíndricas}{
+    \frac{\partial \rho}{\partial t} + \frac{1}{r} \frac{\partial}{\partial r}(r\rho v_r) + \frac{1}{r} \frac{\partial}{\partial\theta}(\rho v_{\theta}) + \frac{\partial}{\partial z}(\rho v_z) = 0
+}
+
+\subsubsection{Simplificação para escoamento incompressível}
+Se assumirmos escoamento incompressível, $\partial\rho/\partial t \approx 0$, e a densidade pode ser tirada para fora da divergência, obtendo se as equação simplificada:
+\collectequation{DF-formulas}{Equação da continuidade}{Escoamento incompressível}{
+    \nabla\cdot\vec{V} = 0
+}

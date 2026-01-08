@@ -28,3 +28,38 @@
 \begin {equation*} \boxed {  \frac {p_1}{\rho } + \frac {1}{2}V_1^2 + gz_1 = \frac {p_2}{\rho } + \frac {1}{2}V_2^2 + gz_2 = \text {const}  } \end {equation*}
 
 
+ \noindent \textbf {Equação da Energia} \\ \indent 1 entrada e 1 saída unidimensionais, escoamento estacionário 
+
+\begin {equation*} \boxed {  \hat {h}_1 + \frac {1}{2}V_1^2 + gz_1 = \left (\hat {h}_2 + \frac {1}{2}V_2^2 + gz_2\right ) - q + w_s + w_{ss}  } \end {equation*}
+
+
+ \noindent \textbf {Equação da Energia} \\ \indent Mesmas condições que a anterior + escoamento incompressível, trocas de calor com o exterior nulas, com uma bomba e uma turbina a operar no fluido. Unidades de comprimento: carga hidraulica 
+
+\begin {equation*} \boxed {  \left (\frac {p_1}{\rho g} + \frac {V_1^2}{2g} + z_1\right )_{\text {in}} = \left (\frac {p_2}{\rho g} + \frac {V_2^2}{2g} + z_2\right )_{\text {out}} + h_{\text {atrito}} + h_{\text {turbina}} - h_{\text {bomba}}  } \end {equation*}
+
+
+ \noindent \textbf {Derivada Material} \\ \indent  Derivada de uma propriedade de uma partícula de matéria que se move com velocidade $\vec {v}$  
+
+\begin {equation*} \boxed {  \frac {D}{Dt} = \frac {\partial }{\partial t} + \left (\vec {v}(\vec {r},t)\cdot \vec {\nabla }\right )  } \end {equation*}
+
+
+ \noindent \textbf {Equação da continuidade} \\ \indent Conservação da massa 
+
+\begin {equation*} \boxed {  \frac {\partial \rho }{\partial t} + \nabla \cdot (\rho \vec {V}) = 0  } \end {equation*}
+
+
+ \noindent \textbf {Equação da continuidade} \\ \indent Coordenadas cilíndricas 
+
+\begin {equation*} \boxed {  \frac {\partial \rho }{\partial t} + \frac {1}{r} \frac {\partial }{\partial r}(r\rho v_r) + \frac {1}{r} \frac {\partial }{\partial \theta }(\rho v_{\theta }) + \frac {\partial }{\partial z}(\rho v_z) = 0  } \end {equation*}
+
+
+ \noindent \textbf {Equação da continuidade} \\ \indent Escoamento incompressível 
+
+\begin {equation*} \boxed {  \nabla \cdot \vec {V} = 0  } \end {equation*}
+
+
+ \noindent \textbf {Equação de Navier-Stokes para a componente $x$} \\ \indent Equivalente para as componentes $y$ e $z$ 
+
+\begin {equation*} \boxed {  \rho \left (\frac {\partial u}{\partial t} + u\,\frac {\partial u}{\partial x} + v\,\frac {\partial u}{\partial y} + w\,\frac {\partial u}{\partial z}\right ) = \rho g_x - \frac {\partial p}{\partial x} + \frac {\partial \tau _{xx}}{\partial x} + \frac {\partial \tau _{yx}}{\partial y} + \frac {\partial \tau _{zx}}{\partial z}  } \end {equation*}
+
+

@@ -1,0 +1,74 @@
+\subsection{Equação da conservação da energia (pag. 184)}
+
+Após aplicar o teorema do transporte de Reynolds para a conservação da massa, conservação do momento linear, e do momento angular (este último não abordado na cadeira de TDF, mas encontra-se presente no livro), aplicamos agora o teorema à \textbf{Primeira Lei da Termodinâmica}.
+
+A variável em estudo passa a ser $E$, a energia total, e a quantidade por unidade de massa é a energia expecífica:
+\begin{equation*}
+    e = \frac{1}{2} V^2 + \hat{u} + gz
+\end{equation*}
+
+Assim sendo, a \textbf{Primeira Lei da Termodinâmica}, escrita na forma diferencial, toma a seguinte forma:
+\begin{equation*}
+    \frac{dQ}{dt} - \frac{dW}{dt} = \frac{d}{dt}\left(\int_{CV} e\rho\,d\mathcal{V}\right) + \int_{CS} e\rho(V\cdot\hat{n})\,dA
+\end{equation*}
+
+O termo do Calor, $\dot{Q}$ pode ser decomposto em várias componentes: condução, convecção e radiação, no entanto não é abordado na cadeira, nem no livro.
+
+Já o termo do trabalho pode ser decomposto em 3 parcelas:
+\begin{equation} \label{eq:trabalho-eixo-press-visc}
+    \dot{W} = \dot{W}_{eixo} + \dot{W}_{pressao} + \dot{W}_{tensao\ de\ viscosidade} = \dot{W}_{s} + \dot{W}_{p} + \dot{W}_{\tau}
+\end{equation}
+O trabalho de forças gravíticas não é incluido, pois já é contabilizado na primeira lei da Termodinâmica como energia potencial.
+
+O trabalho de eixo representa o trabalho realizado por uma máquina (veio de um motor, ventoinha, pistão, etc.) que entra pela superficie de controlo.
+
+O trabalho realizado pela pressão ocorre apenas na superfície de controlo, pois dentro do volume de controlo todas as forças de pressão são iguais e opostas, logo cancelam-se. O trabalho da pressão é dado pela força de pressão vezes a velocidade normal para dentro do volume de controlo:
+\begin{gather*}
+    d\dot{W}_{p} = p(\vec{V}\cdot\hat{n})\,dA \Leftrightarrow \\
+    \dot{W}_{p} = \int_{CS} p(\vec{V}\cdot\hat{n})\,dA
+\end{gather*}
+
+O trabalho das forças de viscosidade também ocorre apenas na superficie de controlo, e é dado por:
+\begin{gather*}
+    d\dot{W}_{\nu} = -\tau \cdot \vec{V}\,dA \Leftrightarrow \\
+    \dot{W}_{\nu} = -\int_{CS} \tau \cdot \vec{V}\,dA
+\end{gather*}
+
+Calculando este termo:
+\begin{itemize}
+    \item numa \textbf{superficie sólida} \textit{(no splipping condition)}
+        \subitem $\vec{V} = \vec{0}$ então $\dot{W}_{\nu} = 0$
+    \item numa \textbf{entrada ou saída} do volume de controlo
+        \subitem $d\dot{W}_{\nu} = -\tau_{nn} V_n\,dA \approx 0$
+        \subitem onde $\tau_{nn}$ é a componente normal da tensão que é normalmente muito pequena.
+    \item numa \textbf{superficie $ss$ de um fluido} externo ao sistema
+        \subitem $d\dot{W}_{\nu} = -\tau_n V_n\,dA \neq 0$
+        \subitem sendo esta a única componente \textbf{não desprezada}.
+\end{itemize}
+
+Substituindo esta equação na primeira lei da Termodinâmica, e simplificando, obtemos a seguinte relação:
+\begin{equation*}
+    \dot{Q} - \dot{W}_s - \dot{W}_{ss} = \int_{CV} \frac{\partial}{\partial t}\left[\rho\left(\hat{u} + \frac{1}{2}V^2 + gz\right)\right]\,d\mathcal{V} + \int_{CS} \rho \left(\hat{h} + \frac{1}{2}V^2 + gz\right)(\vec{V}\cdot\hat{n})\,dA
+\end{equation*}
+
+Esta é a equação geral para a primeira lei da Termodinâmica, mas é mais útil quando simplficada para 1 entrada e 1 saída unidimensionais e escoamento estacionário obtemos a seguinte versão simplificada:
+\collectequation{DF-formulas}{Equação da Energia}{1 entrada e 1 saída unidimensionais, escoamento estacionário}{
+    \hat{h}_1 + \frac{1}{2}V_1^2 + gz_1 = \left(\hat{h}_2 + \frac{1}{2}V_2^2 + gz_2\right) - q + w_s + w_{ss}
+}
+Onde $w_s$ é o trabalho de eixo e $w_{ss}$ é o trabalho da viscosidade de um fluido externo ao sistema.
+
+Assume-se ainda um escoamento incompressível e trocas de calor com o exterior nulas, com uma bomba e uma turbina a operar no fluido. Dividem-se todos os termos pela aceleração gravítica, para converter as energias $q$ e $w$ para unidades de comprimento, que representam a \textbf{carga hidraulica} $h$. Com estas condições, obtém-se a formula:
+\collectequation{DF-formulas}{Equação da Energia}{Mesmas condições que a anterior + escoamento incompressível, trocas de calor com o exterior nulas, com uma bomba e uma turbina a operar no fluido. Unidades de comprimento: carga hidraulica}{
+    \left(\frac{p_1}{\rho g} + \frac{V_1^2}{2g} + z_1\right)_{\text{in}} = \left(\frac{p_2}{\rho g} + \frac{V_2^2}{2g} + z_2\right)_{\text{out}} + h_{\text{atrito}} + h_{\text{turbina}} - h_{\text{bomba}}
+}
+Neste caso o trabalho da fricção remove sempre energia ao fluido, ou seja, $h_{\text{atrito}}$ é sempre positivo.
+
+\warnbox{ATENÇÃO: Entalpia $\hat{h}$ vs carga hidraulica $h$}{
+    Não confundir a notação de entalpia $\hat{h} = \hat{u} + \frac{p}{\rho}$ com a notação de carga hidraulica $h = \frac{e}{g}$
+
+    A carga hidraulica é uma representação da energia, mas com unidades de comprimento, que representa a altura que uma coluna de fluido a uma certa pressão e velocidade teria num tubo vertical.
+    
+    A presença de $g$ deve-se ao facto de líquido sobe no tubo, contra a ação da gravidade.
+}
+
+Por vezes adiciona-se um fator de correção ao termo da velocidade, se não se puder assumir que esta é constante nas secçãoes de entrada e saida. O fator de correção representa-se por $\alpha$ e é igual a 2 para escoamentos perfeitamente laminares, e aproximadamente 1 num escoamento turbulento
